@@ -27,7 +27,7 @@ END:DAYLIGHT
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:salibandy-siemen-001@riihikoski-pelit
-DTSTAMP:20260920T192549Z
+DTSTAMP:20260920T193152Z
 DTSTART;TZID=Europe/Helsinki:20260926T100000
 DTEND;TZID=Europe/Helsinki:20260926T113000
 SUMMARY:U14 tytöt LR valkoinen: PöU - Karhut White
@@ -39,7 +39,7 @@ URL:https://tulospalvelu.salibandy.fi/location/734827322/fixtures
 END:VEVENT
 BEGIN:VEVENT
 UID:salibandy-siemen-004@riihikoski-pelit
-DTSTAMP:20260920T192549Z
+DTSTAMP:20260920T193152Z
 DTSTART;TZID=Europe/Helsinki:20260926T140000
 DTEND;TZID=Europe/Helsinki:20260926T153000
 SUMMARY:U14 tytöt LR valkoinen: LaJy - PöU
@@ -51,7 +51,7 @@ URL:https://tulospalvelu.salibandy.fi/location/734827322/fixtures
 END:VEVENT
 BEGIN:VEVENT
 UID:salibandy-siemen-005@riihikoski-pelit
-DTSTAMP:20260920T192549Z
+DTSTAMP:20260920T193152Z
 DTSTART;TZID=Europe/Helsinki:20261003T100000
 DTEND;TZID=Europe/Helsinki:20261003T113000
 SUMMARY:U16-17 tytöt LR: PöU - FBC Turku/SalPa U14T
@@ -63,7 +63,7 @@ URL:https://tulospalvelu.salibandy.fi/location/734827322/fixtures
 END:VEVENT
 BEGIN:VEVENT
 UID:salibandy-siemen-010@riihikoski-pelit
-DTSTAMP:20260920T192549Z
+DTSTAMP:20260920T193152Z
 DTSTART;TZID=Europe/Helsinki:20261003T150000
 DTEND;TZID=Europe/Helsinki:20261003T163000
 SUMMARY:U16-17 tytöt LR: Karhut - PöU
@@ -75,7 +75,7 @@ URL:https://tulospalvelu.salibandy.fi/location/734827322/fixtures
 END:VEVENT
 BEGIN:VEVENT
 UID:salibandy-siemen-011@riihikoski-pelit
-DTSTAMP:20260920T192549Z
+DTSTAMP:20260920T193152Z
 DTSTART;TZID=Europe/Helsinki:20261010T100000
 DTEND;TZID=Europe/Helsinki:20261010T113000
 SUMMARY:Naisten Suomisarja: Nystars - PöU
@@ -87,7 +87,7 @@ URL:https://tulospalvelu.salibandy.fi/location/734827322/fixtures
 END:VEVENT
 BEGIN:VEVENT
 UID:salibandy-siemen-014@riihikoski-pelit
-DTSTAMP:20260920T192549Z
+DTSTAMP:20260920T193152Z
 DTSTART;TZID=Europe/Helsinki:20261010T150000
 DTEND;TZID=Europe/Helsinki:20261010T163000
 SUMMARY:Naisten Suomisarja: PöU - AFC Campus
@@ -99,7 +99,7 @@ URL:https://tulospalvelu.salibandy.fi/location/734827322/fixtures
 END:VEVENT
 BEGIN:VEVENT
 UID:salibandy-siemen-015@riihikoski-pelit
-DTSTAMP:20260920T192549Z
+DTSTAMP:20260920T193152Z
 DTSTART;TZID=Europe/Helsinki:20261017T100000
 DTEND;TZID=Europe/Helsinki:20261017T113000
 SUMMARY:U12 tytöt LR (syksy): PöU - Karhut
@@ -111,7 +111,7 @@ URL:https://tulospalvelu.salibandy.fi/location/734827322/fixtures
 END:VEVENT
 BEGIN:VEVENT
 UID:salibandy-siemen-017@riihikoski-pelit
-DTSTAMP:20260920T192549Z
+DTSTAMP:20260920T193152Z
 DTSTART;TZID=Europe/Helsinki:20261017T113000
 DTEND;TZID=Europe/Helsinki:20261017T130000
 SUMMARY:U12 tytöt LR (syksy): SalBa - PöU
@@ -123,7 +123,7 @@ URL:https://tulospalvelu.salibandy.fi/location/734827322/fixtures
 END:VEVENT
 BEGIN:VEVENT
 UID:salibandy-siemen-023@riihikoski-pelit
-DTSTAMP:20260920T192549Z
+DTSTAMP:20260920T193152Z
 DTSTART;TZID=Europe/Helsinki:20261017T153500
 DTEND;TZID=Europe/Helsinki:20261017T170500
 SUMMARY:U12 tytöt LR (syksy): PöU - SBS Wirmo Keltainen
@@ -135,7 +135,7 @@ URL:https://tulospalvelu.salibandy.fi/location/734827322/fixtures
 END:VEVENT
 BEGIN:VEVENT
 UID:salibandy-siemen-024@riihikoski-pelit
-DTSTAMP:20260920T192549Z
+DTSTAMP:20260920T193152Z
 DTSTART;TZID=Europe/Helsinki:20261024T140000
 DTEND;TZID=Europe/Helsinki:20261024T153000
 SUMMARY:U16 pojat LR H: PöU Keltainen - Koitto/Satabandy P16
@@ -147,7 +147,7 @@ URL:https://tulospalvelu.salibandy.fi/location/734827322/fixtures
 END:VEVENT
 BEGIN:VEVENT
 UID:salibandy-siemen-029@riihikoski-pelit
-DTSTAMP:20260920T192549Z
+DTSTAMP:20260920T193152Z
 DTSTART;TZID=Europe/Helsinki:20261024T190000
 DTEND;TZID=Europe/Helsinki:20261024T203000
 SUMMARY:U16 pojat LR H: KK-V - PöU Keltainen
@@ -159,7 +159,7 @@ URL:https://tulospalvelu.salibandy.fi/location/734827322/fixtures
 END:VEVENT
 BEGIN:VEVENT
 UID:salibandy-siemen-030@riihikoski-pelit
-DTSTAMP:20260920T192549Z
+DTSTAMP:20260920T193152Z
 DTSTART;TZID=Europe/Helsinki:20261030T193000
 DTEND;TZID=Europe/Helsinki:20261030T210000
 SUMMARY:M3DIV LR: PöU - FC KYPS
@@ -171,7 +171,7 @@ URL:https://tulospalvelu.salibandy.fi/location/734827322/fixtures
 END:VEVENT
 BEGIN:VEVENT
 UID:salibandy-siemen-033@riihikoski-pelit
-DTSTAMP:20260920T192549Z
+DTSTAMP:20260920T193152Z
 DTSTART;TZID=Europe/Helsinki:20261031T143000
 DTEND;TZID=Europe/Helsinki:20261031T160000
 SUMMARY:M3DIV LR: AFC Campus - PöU
@@ -183,7 +183,7 @@ URL:https://tulospalvelu.salibandy.fi/location/734827322/fixtures
 END:VEVENT
 BEGIN:VEVENT
 UID:salibandy-siemen-034@riihikoski-pelit
-DTSTAMP:20260920T192549Z
+DTSTAMP:20260920T193152Z
 DTSTART;TZID=Europe/Helsinki:20261120T193000
 DTEND;TZID=Europe/Helsinki:20261120T210000
 SUMMARY:M3DIV LR: PöU - FC KYPS
@@ -195,7 +195,7 @@ URL:https://tulospalvelu.salibandy.fi/location/734827322/fixtures
 END:VEVENT
 BEGIN:VEVENT
 UID:salibandy-siemen-035@riihikoski-pelit
-DTSTAMP:20260920T192549Z
+DTSTAMP:20260920T193152Z
 DTSTART;TZID=Europe/Helsinki:20261128T150000
 DTEND;TZID=Europe/Helsinki:20261128T163000
 SUMMARY:U15 pojat LR H: PöU Musta - SalBa valkoinen
@@ -207,7 +207,7 @@ URL:https://tulospalvelu.salibandy.fi/location/734827322/fixtures
 END:VEVENT
 BEGIN:VEVENT
 UID:salibandy-siemen-038@riihikoski-pelit
-DTSTAMP:20260920T192549Z
+DTSTAMP:20260920T193152Z
 DTSTART;TZID=Europe/Helsinki:20261128T180000
 DTEND;TZID=Europe/Helsinki:20261128T193000
 SUMMARY:U15 pojat LR H: TPS Valkoinen - PöU Musta
@@ -219,7 +219,7 @@ URL:https://tulospalvelu.salibandy.fi/location/734827322/fixtures
 END:VEVENT
 BEGIN:VEVENT
 UID:salibandy-siemen-040@riihikoski-pelit
-DTSTAMP:20260920T192549Z
+DTSTAMP:20260920T193152Z
 DTSTART;TZID=Europe/Helsinki:20261218T193000
 DTEND;TZID=Europe/Helsinki:20261218T210000
 SUMMARY:M3DIV LR: PöU - KBV
@@ -231,7 +231,7 @@ URL:https://tulospalvelu.salibandy.fi/location/734827322/fixtures
 END:VEVENT
 BEGIN:VEVENT
 UID:salibandy-siemen-041@riihikoski-pelit
-DTSTAMP:20260920T192549Z
+DTSTAMP:20260920T193152Z
 DTSTART;TZID=Europe/Helsinki:20261219T140000
 DTEND;TZID=Europe/Helsinki:20261219T153000
 SUMMARY:Naisten Suomisarja: PöU - SBSV
@@ -243,7 +243,7 @@ URL:https://tulospalvelu.salibandy.fi/location/734827322/fixtures
 END:VEVENT
 BEGIN:VEVENT
 UID:salibandy-siemen-044@riihikoski-pelit
-DTSTAMP:20260920T192549Z
+DTSTAMP:20260920T193152Z
 DTSTART;TZID=Europe/Helsinki:20261219T190000
 DTEND;TZID=Europe/Helsinki:20261219T203000
 SUMMARY:Naisten Suomisarja: HIFK - PöU
@@ -255,7 +255,7 @@ URL:https://tulospalvelu.salibandy.fi/location/734827322/fixtures
 END:VEVENT
 BEGIN:VEVENT
 UID:salibandy-siemen-045@riihikoski-pelit
-DTSTAMP:20260920T192549Z
+DTSTAMP:20260920T193152Z
 DTSTART;TZID=Europe/Helsinki:20270109T100000
 DTEND;TZID=Europe/Helsinki:20270109T113000
 SUMMARY:U16 pojat kilpa LR+SS: PöU Musta - TPS
@@ -267,7 +267,7 @@ URL:https://tulospalvelu.salibandy.fi/location/734827322/fixtures
 END:VEVENT
 BEGIN:VEVENT
 UID:salibandy-siemen-047@riihikoski-pelit
-DTSTAMP:20260920T192549Z
+DTSTAMP:20260920T193152Z
 DTSTART;TZID=Europe/Helsinki:20270109T130000
 DTEND;TZID=Europe/Helsinki:20270109T143000
 SUMMARY:U16 pojat kilpa LR+SS: FoSu Sininen - PöU Musta
@@ -279,7 +279,7 @@ URL:https://tulospalvelu.salibandy.fi/location/734827322/fixtures
 END:VEVENT
 BEGIN:VEVENT
 UID:salibandy-siemen-048@riihikoski-pelit
-DTSTAMP:20260920T192549Z
+DTSTAMP:20260920T193152Z
 DTSTART;TZID=Europe/Helsinki:20270109T160000
 DTEND;TZID=Europe/Helsinki:20270109T173000
 SUMMARY:N4DIV LR: PöU 3 - Karhut 2
@@ -291,7 +291,7 @@ URL:https://tulospalvelu.salibandy.fi/location/734827322/fixtures
 END:VEVENT
 BEGIN:VEVENT
 UID:salibandy-siemen-051@riihikoski-pelit
-DTSTAMP:20260920T192549Z
+DTSTAMP:20260920T193152Z
 DTSTART;TZID=Europe/Helsinki:20270109T190000
 DTEND;TZID=Europe/Helsinki:20270109T203000
 SUMMARY:N4DIV LR: RaSa - PöU 3
@@ -303,7 +303,7 @@ URL:https://tulospalvelu.salibandy.fi/location/734827322/fixtures
 END:VEVENT
 BEGIN:VEVENT
 UID:salibandy-siemen-055@riihikoski-pelit
-DTSTAMP:20260920T192549Z
+DTSTAMP:20260920T193152Z
 DTSTART;TZID=Europe/Helsinki:20270116T150000
 DTEND;TZID=Europe/Helsinki:20270116T163000
 SUMMARY:M3DIV LR: TVA - PöU
@@ -315,7 +315,7 @@ URL:https://tulospalvelu.salibandy.fi/location/734827322/fixtures
 END:VEVENT
 BEGIN:VEVENT
 UID:salibandy-siemen-057@riihikoski-pelit
-DTSTAMP:20260920T192549Z
+DTSTAMP:20260920T193152Z
 DTSTART;TZID=Europe/Helsinki:20270116T180000
 DTEND;TZID=Europe/Helsinki:20270116T193000
 SUMMARY:M3DIV LR: PöU - TVV
@@ -327,7 +327,7 @@ URL:https://tulospalvelu.salibandy.fi/location/734827322/fixtures
 END:VEVENT
 BEGIN:VEVENT
 UID:salibandy-siemen-059@riihikoski-pelit
-DTSTAMP:20260920T192549Z
+DTSTAMP:20260920T193152Z
 DTSTART;TZID=Europe/Helsinki:20270130T140000
 DTEND;TZID=Europe/Helsinki:20270130T153000
 SUMMARY:U16-17 tytöt LR: PöU - Karhut
@@ -339,7 +339,7 @@ URL:https://tulospalvelu.salibandy.fi/location/734827322/fixtures
 END:VEVENT
 BEGIN:VEVENT
 UID:salibandy-siemen-064@riihikoski-pelit
-DTSTAMP:20260920T192549Z
+DTSTAMP:20260920T193152Z
 DTSTART;TZID=Europe/Helsinki:20270130T190000
 DTEND;TZID=Europe/Helsinki:20270130T203000
 SUMMARY:U16-17 tytöt LR: SB Naantali - PöU
@@ -351,7 +351,7 @@ URL:https://tulospalvelu.salibandy.fi/location/734827322/fixtures
 END:VEVENT
 BEGIN:VEVENT
 UID:salibandy-siemen-065@riihikoski-pelit
-DTSTAMP:20260920T192549Z
+DTSTAMP:20260920T193152Z
 DTSTART;TZID=Europe/Helsinki:20270206T090000
 DTEND;TZID=Europe/Helsinki:20270206T103000
 SUMMARY:N3DIV LR: PöU 2 - SBS Littoinen
@@ -363,7 +363,7 @@ URL:https://tulospalvelu.salibandy.fi/location/734827322/fixtures
 END:VEVENT
 BEGIN:VEVENT
 UID:salibandy-siemen-068@riihikoski-pelit
-DTSTAMP:20260920T192549Z
+DTSTAMP:20260920T193152Z
 DTSTART;TZID=Europe/Helsinki:20270206T120000
 DTEND;TZID=Europe/Helsinki:20270206T133000
 SUMMARY:N3DIV LR: SB Naantali - PöU 2
@@ -375,7 +375,7 @@ URL:https://tulospalvelu.salibandy.fi/location/734827322/fixtures
 END:VEVENT
 BEGIN:VEVENT
 UID:salibandy-siemen-070@riihikoski-pelit
-DTSTAMP:20260920T192549Z
+DTSTAMP:20260920T193152Z
 DTSTART;TZID=Europe/Helsinki:20270206T150000
 DTEND;TZID=Europe/Helsinki:20270206T163000
 SUMMARY:N4DIV LR: PöU 3 - Karhut 2
@@ -387,7 +387,7 @@ URL:https://tulospalvelu.salibandy.fi/location/734827322/fixtures
 END:VEVENT
 BEGIN:VEVENT
 UID:salibandy-siemen-073@riihikoski-pelit
-DTSTAMP:20260920T192549Z
+DTSTAMP:20260920T193152Z
 DTSTART;TZID=Europe/Helsinki:20270206T180000
 DTEND;TZID=Europe/Helsinki:20270206T193000
 SUMMARY:N4DIV LR: StrutsiMutsit - PöU 3
@@ -399,7 +399,7 @@ URL:https://tulospalvelu.salibandy.fi/location/734827322/fixtures
 END:VEVENT
 BEGIN:VEVENT
 UID:salibandy-siemen-075@riihikoski-pelit
-DTSTAMP:20260920T192549Z
+DTSTAMP:20260920T193152Z
 DTSTART;TZID=Europe/Helsinki:20270213T100000
 DTEND;TZID=Europe/Helsinki:20270213T113000
 SUMMARY:Naisten Suomisarja: AFC Campus - PöU
@@ -411,7 +411,7 @@ URL:https://tulospalvelu.salibandy.fi/location/734827322/fixtures
 END:VEVENT
 BEGIN:VEVENT
 UID:salibandy-siemen-077@riihikoski-pelit
-DTSTAMP:20260920T192549Z
+DTSTAMP:20260920T193152Z
 DTSTART;TZID=Europe/Helsinki:20270213T143000
 DTEND;TZID=Europe/Helsinki:20270213T160000
 SUMMARY:Naisten Suomisarja: PöU - Nystars
@@ -423,7 +423,7 @@ URL:https://tulospalvelu.salibandy.fi/location/734827322/fixtures
 END:VEVENT
 BEGIN:VEVENT
 UID:salibandy-siemen-078@riihikoski-pelit
-DTSTAMP:20260920T192549Z
+DTSTAMP:20260920T193152Z
 DTSTART;TZID=Europe/Helsinki:20270227T140000
 DTEND;TZID=Europe/Helsinki:20270227T153000
 SUMMARY:M3DIV LR: PöU - TVA
@@ -435,7 +435,7 @@ URL:https://tulospalvelu.salibandy.fi/location/734827322/fixtures
 END:VEVENT
 BEGIN:VEVENT
 UID:salibandy-siemen-081@riihikoski-pelit
-DTSTAMP:20260920T192549Z
+DTSTAMP:20260920T193152Z
 DTSTART;TZID=Europe/Helsinki:20270227T193000
 DTEND;TZID=Europe/Helsinki:20270227T210000
 SUMMARY:M3DIV LR: OU - PöU
@@ -447,7 +447,7 @@ URL:https://tulospalvelu.salibandy.fi/location/734827322/fixtures
 END:VEVENT
 BEGIN:VEVENT
 UID:salibandy-siemen-082@riihikoski-pelit
-DTSTAMP:20260920T192549Z
+DTSTAMP:20260920T193152Z
 DTSTART;TZID=Europe/Helsinki:20270306T193000
 DTEND;TZID=Europe/Helsinki:20270306T210000
 SUMMARY:M3DIV LR: PöU - FC KYPS
@@ -459,7 +459,7 @@ URL:https://tulospalvelu.salibandy.fi/location/734827322/fixtures
 END:VEVENT
 BEGIN:VEVENT
 UID:salibandy-siemen-083@riihikoski-pelit
-DTSTAMP:20260920T192549Z
+DTSTAMP:20260920T193152Z
 DTSTART;TZID=Europe/Helsinki:20270320T100000
 DTEND;TZID=Europe/Helsinki:20270320T113000
 SUMMARY:U16 pojat LR H: PöU Keltainen - SalBa
@@ -471,7 +471,7 @@ URL:https://tulospalvelu.salibandy.fi/location/734827322/fixtures
 END:VEVENT
 BEGIN:VEVENT
 UID:salibandy-siemen-088@riihikoski-pelit
-DTSTAMP:20260920T192549Z
+DTSTAMP:20260920T193152Z
 DTSTART;TZID=Europe/Helsinki:20270320T150000
 DTEND;TZID=Europe/Helsinki:20270320T163000
 SUMMARY:U16 pojat LR H: SB Somero - PöU Keltainen
