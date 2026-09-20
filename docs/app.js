@@ -379,12 +379,60 @@
     }
   }
 
-  function naytaHuomio(data) {
-    var alustavia = data.ottelut.some(function (o) { return o.alustava; });
-    if (!alustavia) { return; }
+  var GENETIIVIT = {
+    "Jalkapallo": "jalkapallon",
+    "Futsal": "futsalin",
+    "Salibandy": "salibandyn"
+  };
+
+  function genetiivi(laji) {
+    return GENETIIVIT[laji] || laji.toLowerCase();
+  }
+
+  function isollaAlkuun(teksti) {
+    return teksti.charAt(0).toUpperCase() + teksti.slice(1);
+  }
+
+  /* "a", "a ja b", "a, b ja c" */
+  function luettelo(sanat) {
+    if (sanat.length <= 1) { return sanat[0] || ""; }
+    return sanat.slice(0, -1).join(", ") + " ja " + sanat[sanat.length - 1];
+  }
+
+  /* Huomautus kertoo, minkä lajien tiedot tulevat rajapinnasta ja mitkä on
+     poimittu käsin. Teksti johdetaan siitä, mitkä lähteet päivitys sai
+     haettua, joten se korjautuu itsestään kun puuttuva avain otetaan
+     käyttöön - eikä jää väittämään vanhaa. */
+  function naytaHuomio(data, asetukset) {
     var laatikko = document.getElementById("huomio");
-    laatikko.textContent = "Sivu näyttää toistaiseksi käsin poimittua ohjelmaa. " +
-      "Kun tulospalvelun rajapinta on otettu käyttöön, tiedot päivittyvät itsestään.";
+    laatikko.textContent = "";
+    laatikko.hidden = true;
+
+    var alustavat = [];
+    data.ottelut.forEach(function (o) {
+      if (o.alustava && alustavat.indexOf(o.laji) === -1) { alustavat.push(o.laji); }
+    });
+    if (!alustavat.length) { return; }
+
+    var haetut = data.lahteet_haettu || [];
+    var automaattiset = [];
+    (asetukset.lahteet || []).forEach(function (lahde) {
+      if (haetut.indexOf(lahde.id) === -1) { return; }
+      (lahde.lajit || []).forEach(function (laji) {
+        if (automaattiset.indexOf(laji) === -1) { automaattiset.push(laji); }
+      });
+    });
+
+    var lauseet = [
+      isollaAlkuun(luettelo(alustavat.map(genetiivi))) +
+        " otteluohjelma on toistaiseksi poimittu käsin."
+    ];
+    if (automaattiset.length) {
+      lauseet.push(isollaAlkuun(luettelo(automaattiset.map(genetiivi))) +
+        " rajapinta on jo käytössä, ja niiden pelit päivittyvät automaattisesti.");
+    }
+
+    laatikko.textContent = lauseet.join(" ");
     laatikko.hidden = false;
   }
 
@@ -411,7 +459,7 @@
       tila.suodattimet = asetukset.suodattimet || { lajit: [], paikat: [] };
       naytaKuvateksti(asetukset.sivu || {});
       naytaPaivitetty(data.paivitetty);
-      naytaHuomio(data);
+      naytaHuomio(data, asetukset);
       piirra();
       piirraKalenterit();
     }).catch(function () {

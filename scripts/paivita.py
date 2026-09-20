@@ -310,6 +310,13 @@ def kirjoita_asetukset(config):
     asetukset = {
         "sivu": config.get("sivu", {}),
         "suodattimet": config.get("suodattimet", {}),
+        # Mitä lajeja mikäkin lähde kattaa. Sivu kertoo näiden avulla, minkä
+        # lajien tiedot päivittyvät rajapinnasta ja mitkä ovat käsin poimittuja.
+        "lahteet": [{"id": l["id"],
+                     # järjestys configin mukaan, ei aakkosissa - lajit
+                     # luetellaan sivulla siinä järjestyksessä kuin ne on kirjattu
+                     "lajit": list(dict.fromkeys(k["laji"] for k in l.get("kyselyt", [])))}
+                    for l in config.get("lahteet", [])],
         "seurat": [{"id": s["id"], "nimi": s["nimi"], "lyhenne": s["lyhenne"],
                     "logo": s.get("logo", "")}
                    for s in config.get("seurat", [])],

@@ -23,6 +23,21 @@
    }
   ]
  },
+ "lahteet": [
+  {
+   "id": "spl",
+   "lajit": [
+    "Jalkapallo",
+    "Futsal"
+   ]
+  },
+  {
+   "id": "salibandy",
+   "lajit": [
+    "Salibandy"
+   ]
+  }
+ ],
  "seurat": [
   {
    "id": "poka",
