@@ -252,3 +252,20 @@ tapaan ja sille pieni lukija, jonka tulos yhdistetään otteluihin.
 - Jos toinen liitto on alhaalla päivityshetkellä, sen vanha data säilyy — yksi
   kaatunut rajapinta ei tyhjennä koko sivua.
 - Menneet ottelut poistuvat listalta automaattisesti.
+- **Koneen tuottamat tiedostot ovat GitHubin omaisuutta.** `docs/data/*.json` ja
+  `docs/kalenteri/*.ics` syntyvät skriptillä, ja yöllinen työ commitoi ne. Jos
+  ajat `paivita.py`:n omalla koneella ja työ on ajanut välissä, tulee
+  yhdistämisristiriita — näitä tiedostoja ei voi yhdistää rivi riviltä.
+
+  Ristiriita ratkeaa ottamalla GitHubin versio; se on tuoreempi ja se on se,
+  joka on julkaistu:
+
+  ```bash
+  git checkout --theirs docs/data/pelit.json docs/kalenteri/*.ics
+  git add docs/data docs/kalenteri
+  git commit
+  ```
+
+  Helpointa on olla ajamatta `paivita.py`:tä paikallisesti lainkaan. Koodia
+  muokatessa riittää `python scripts/siemenna.py` tai
+  `python scripts/paivita.py --vain-kalenteri`, ja varsinaisen haun tekee pilvi.
