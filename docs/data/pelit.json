@@ -1,9 +1,8 @@
 {
- "paivitetty": "2026-09-20T16:56:28+00:00",
- "lahteet_haettu": [
-  "spl"
- ],
+ "paivitetty": "2026-09-20T16:57:53+00:00",
+ "lahteet_haettu": [],
  "huomiot": [
+  "Palloliitto (jalkapallo ja futsal): API-avain puuttuu (SPL_API_KEY), lahde ohitettiin",
   "Salibandyliitto: API-avain puuttuu (SALIBANDY_API_KEY), lahde ohitettiin"
  ],
  "ottelut": [
