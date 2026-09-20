@@ -44,6 +44,16 @@ jobs:
           echo "valinta=$valinta" >> "$GITHUB_OUTPUT"
           echo "Tila: $valinta"
 
+      # Käsin käynnistetyssä ajossa todennetaan yhteys, vaikka julkaistavaa ei
+      # olisi. Muuten rikkinäinen tunnus paljastuisi vasta ensimmäisenä
+      # pelipäivänä, mahdollisesti kuukausien päästä.
+      - name: Tarkista Facebook-yhteys
+        if: github.event_name == 'workflow_dispatch'
+        env:
+          FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
+          FB_PAGE_TOKEN: ${{ secrets.FB_PAGE_TOKEN }}
+        run: python scripts/facebook.py --tarkista
+
       - name: Kokoa teksti
         id: kooste
         run: |
