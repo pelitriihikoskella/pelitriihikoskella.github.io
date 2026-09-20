@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pelit Riihikoskella</title>
+<meta name="description" content="Riihikosken urheilukentän ja Kisariihen tulevat pelit yhdellä sivulla. Tilaa ohjelma suoraan puhelimen kalenteriin.">
+<meta property="og:title" content="Pelit Riihikoskella">
+<meta property="og:description" content="Riihikosken urheilukentän ja Kisariihen tulevat pelit yhdellä sivulla.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#1f6b3a">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%231f6b3a'/%3E%3Cpath d='M16 7l6 4.4-2.3 7.1h-7.4L10 11.4z' fill='%23fff'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="ylaosa">
+  <img class="ylaosa-kuva" src="kuvat/kansikuva.webp" width="1572" height="672" fetchpriority="high"
+       alt="Piirroskuva Riihikosken peleistä: Pöytyän Kisariihi, kaukalossa jalkapalloa ja salibandyä, taustalla urheilukenttä juoksuratoineen, katsojia ja jäätelökioski.">
+  <div class="kuori">
+    <p class="paikkakunta">Riihikoski, Pöytyä</p>
+    <h1>Pelit Riihikoskella</h1>
+    <p class="johdanto">
+      Urheilukentän ja Kisariihen tulevat ottelut yhdellä sivulla &mdash;
+      jalkapallo, futsal ja salibandy. Ohjelman saa myös suoraan
+      puhelimen kalenteriin.
+    </p>
+    <p class="paivitetty" id="paivitetty"></p>
+  </div>
+  <p class="kuvateksti" id="kuvateksti"></p>
+</header>
+
+<main class="kuori">
+
+  <div id="huomio" class="huomio" hidden></div>
+
+  <section class="suodattimet" aria-label="Rajaa otteluita">
+    <div class="ryhma">
+      <span class="ryhma-otsikko" id="otsikko-laji">Laji</span>
+      <div class="napit" role="group" aria-labelledby="otsikko-laji" data-suodatin="laji"></div>
+    </div>
+    <div class="ryhma">
+      <span class="ryhma-otsikko" id="otsikko-paikka">Paikka</span>
+      <div class="napit" role="group" aria-labelledby="otsikko-paikka" data-suodatin="paikka"></div>
+    </div>
+    <div class="ryhma" id="ryhma-seura">
+      <span class="ryhma-otsikko" id="otsikko-seura">Seura</span>
+      <div class="napit" role="group" aria-labelledby="otsikko-seura" data-suodatin="seura"></div>
+    </div>
+    <div class="ryhma haku">
+      <label class="ryhma-otsikko" for="haku">Hae joukkuetta</label>
+      <input id="haku" type="search" placeholder="esim. PöU tai Karhut" autocomplete="off">
+    </div>
+  </section>
+
+  <p class="osumat" id="osumat" aria-live="polite"></p>
+
+  <section id="lista" class="lista" aria-label="Tulevat ottelut"></section>
+
+  <section class="tilaus" id="tilaus">
+    <h2>Ota kalenteri puhelimeen</h2>
+    <p class="tilaus-johdanto">
+      Tilaa oman seuran kotipelit kerran, niin ottelut ilmestyvät puhelimeesi
+      itsestään koko kauden ajan &mdash; myös kesän jalkapallo ja talven salibandy
+      samaan kalenteriin.
+    </p>
+    <ul class="kalenterit" id="kalenterit"></ul>
+    <details class="ohje">
+      <summary>Miten tilaus tehdään?</summary>
+      <div class="ohje-sisalto">
+        <p><strong>iPhone:</strong> paina <em>Tilaa kalenteri</em> &rarr; puhelin kysyy
+          vahvistuksen &rarr; <em>Tilaa</em>. Kalenteri näkyy Kalenteri-sovelluksessa.</p>
+        <p><strong>Android / Google-kalenteri:</strong> kopioi osoite
+          <em>Kopioi osoite</em> -painikkeella, avaa tietokoneella
+          <a href="https://calendar.google.com/calendar/r/settings/addbyurl" rel="noopener">Google-kalenterin
+          &rdquo;Lisää URL-osoitteella&rdquo;</a> ja liitä osoite siihen. Kalenteri näkyy tämän
+          jälkeen myös puhelimessa.</p>
+        <p><strong>Vain yksi peli:</strong> paina ottelun kohdalla
+          <em>Kalenteriin</em>, niin saat siitä yksittäisen kalenterimerkinnän.</p>
+        <p class="pikkuteksti">Tilattu kalenteri päivittyy automaattisesti. Puhelin hakee
+          muutokset omaan tahtiinsa, yleensä muutaman tunnin välein.</p>
+      </div>
+    </details>
+  </section>
+</main>
+
+<footer class="alaosa">
+  <div class="kuori">
+    <p>
+      Ottelutiedot: <a href="https://tulospalvelu.palloliitto.fi/location/133/fixtures" rel="noopener">Palloliiton tulospalvelu</a>
+      ja <a href="https://tulospalvelu.salibandy.fi/location/734827322/fixtures" rel="noopener">Salibandyliiton tulospalvelu</a>.
+    </p>
+    <p class="pikkuteksti">
+      Sivu päivittyy automaattisesti. Ottelut voivat siirtyä tai peruuntua &mdash;
+      varmista viime hetken muutokset liiton tulospalvelusta.
+    </p>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

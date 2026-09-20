@@ -1,0 +1,2 @@
+# Kalenteritiedostot vaativat CRLF-rivinvaihdot, ei normalisointia
+*.ics -text

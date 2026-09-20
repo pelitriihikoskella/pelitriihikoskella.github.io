@@ -1,0 +1,56 @@
+{
+ "sivu": {
+  "nimi": "Pelit Riihikoskella",
+  "kuvaus": "Riihikosken urheilukentän ja Kisariihen tulevat pelit yhdellä sivulla.",
+  "aikavyohyke": "Europe/Helsinki",
+  "julkinen_osoite": "https://KAYTTAJATUNNUS.github.io/riihikoski-pelit",
+  "kuva_lahde": ""
+ },
+ "suodattimet": {
+  "lajit": [
+   "Jalkapallo",
+   "Futsal",
+   "Salibandy"
+  ],
+  "paikat": [
+   {
+    "arvo": "Riihikosken urheilupuisto",
+    "nimi": "Urheilukenttä"
+   },
+   {
+    "arvo": "Kisariihi",
+    "nimi": "Kisariihi"
+   }
+  ]
+ },
+ "seurat": [
+  {
+   "id": "poka",
+   "nimi": "Pöytyän Kaima",
+   "lyhenne": "PöKa",
+   "logo": "kuvat/poka.png"
+  },
+  {
+   "id": "pou",
+   "nimi": "Pöytyän Urheilijat",
+   "lyhenne": "PöU",
+   "logo": "kuvat/pou.png"
+  }
+ ],
+ "kalenterit": [
+  {
+   "tiedosto": "poka.ics",
+   "nimi": "Pöytyän Kaima – kotipelit",
+   "suodatin": {
+    "seura": "poka"
+   }
+  },
+  {
+   "tiedosto": "pou.ics",
+   "nimi": "Pöytyän Urheilijat – kotipelit",
+   "suodatin": {
+    "seura": "pou"
+   }
+  }
+ ]
+}

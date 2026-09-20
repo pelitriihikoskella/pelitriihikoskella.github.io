@@ -1,0 +1,394 @@
+/* Pelit Riihikoskella - tyylit.
+   Varit maaritellaan muuttujina, jotta tumma tila on yksi lohko lisaa. */
+
+:root {
+  --nurmi:        #1f6b3a;
+  --nurmi-tumma:  #15502b;
+  --nurmi-vaalea: #e8f3ec;
+  --parketti:     #b4712c;
+  --tausta:       #f7f7f5;
+  --kortti:       #ffffff;
+  --teksti:       #1b1d1b;
+  --teksti-himmea:#5c625d;
+  --viiva:        #e2e4e1;
+  --korostus:     #1f6b3a;
+  --varjo:        0 1px 2px rgba(0,0,0,.05), 0 6px 16px -10px rgba(0,0,0,.25);
+  --pyoristys:    12px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --nurmi:        #5fbf84;
+    --nurmi-tumma:  #3f9c65;
+    --nurmi-vaalea: #16261c;
+    --parketti:     #d69a5c;
+    --tausta:       #121412;
+    --kortti:       #1b1e1c;
+    --teksti:       #eef0ed;
+    --teksti-himmea:#a3aaa4;
+    --viiva:        #2c302d;
+    --korostus:     #5fbf84;
+    --varjo:        0 1px 2px rgba(0,0,0,.4), 0 6px 16px -10px rgba(0,0,0,.8);
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--tausta);
+  color: var(--teksti);
+  font: 16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        "Helvetica Neue", Arial, sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+
+.kuori {
+  width: 100%;
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+a { color: var(--korostus); }
+
+/* --- ylaosa --- */
+
+/* Kansikuva on piirros, joten se nayttetaan sellaisenaan kuvakaistana eika
+   tummennettuna taustana - verho ja paalle ladottu teksti peittaisivat juuri
+   ne pelaajat, joiden takia kuva on hyva. Teksti tulee kuvan alle. */
+.ylaosa {
+  background: linear-gradient(160deg, var(--nurmi-tumma), var(--nurmi));
+  color: #fff;
+  padding: 0 0 28px;
+}
+@media (prefers-color-scheme: dark) {
+  .ylaosa { background: linear-gradient(160deg, #10241a, #1a3d28); }
+}
+
+.ylaosa-kuva {
+  display: block;
+  width: 100%;
+  height: auto;               /* muuten HTML:n height-attribuutti maaraisi korkeuden */
+  /* Panoraamaa rajataan ensisijaisesti leveydesta: jos leveaa kuvaa rajattaisiin
+     vain korkeudesta, ison naytön kohdalla puolet piirroksesta jaisi pois. */
+  max-width: 1200px;
+  margin: 0 auto;
+  max-height: 420px;
+  object-fit: cover;
+  object-position: center 32%;   /* painottuu ylos, jotta puhekupla sailyy */
+  background: #cfe3f5;        /* taivaan savy latauksen ajaksi */
+}
+
+.ylaosa .kuori { padding-top: 24px; }
+
+.kuvateksti {
+  position: relative;
+  max-width: 780px;
+  margin: 18px auto -14px;
+  padding: 0 16px;
+  font-size: 11px;
+  letter-spacing: .04em;
+  text-align: right;
+  opacity: .8;                 /* lähdemerkinnän on tarkoitus olla luettava */
+}
+.kuvateksti:empty { display: none; }
+.kuvateksti a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+.kuvateksti a:hover { opacity: 1; }
+
+.paikkakunta {
+  margin: 0 0 4px;
+  font-size: 13px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  opacity: .8;
+}
+
+.ylaosa h1 {
+  margin: 0 0 10px;
+  font-size: clamp(28px, 7vw, 40px);
+  line-height: 1.1;
+  letter-spacing: -.02em;
+}
+
+.johdanto { margin: 0; max-width: 46ch; opacity: .92; }
+
+.paivitetty {
+  margin: 14px 0 0;
+  font-size: 13px;
+  opacity: .75;
+}
+
+/* --- huomiolaatikko --- */
+
+.huomio {
+  margin: 20px 0 0;
+  padding: 12px 14px;
+  border-left: 3px solid var(--parketti);
+  background: var(--kortti);
+  border-radius: 0 var(--pyoristys) var(--pyoristys) 0;
+  font-size: 14px;
+  color: var(--teksti-himmea);
+  box-shadow: var(--varjo);
+}
+
+/* --- suodattimet --- */
+
+.suodattimet {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 24px;
+  margin: 24px 0 8px;
+  padding: 16px;
+  background: var(--kortti);
+  border: 1px solid var(--viiva);
+  border-radius: var(--pyoristys);
+  box-shadow: var(--varjo);
+}
+
+.ryhma { display: flex; flex-direction: column; gap: 8px; }
+.ryhma.haku { flex: 1 1 200px; }
+
+.ryhma-otsikko {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--teksti-himmea);
+}
+
+.napit { display: flex; flex-wrap: wrap; gap: 6px; }
+
+.napit button {
+  appearance: none;
+  border: 1px solid var(--viiva);
+  background: transparent;
+  color: var(--teksti);
+  border-radius: 999px;
+  padding: 6px 13px;
+  font: inherit;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background .12s, border-color .12s, color .12s;
+}
+.napit button:hover { border-color: var(--korostus); }
+/* Laji, paikka tai seura, jolla ei juuri nyt ole tulevia otteluita.
+   Nappi jää näkyviin, jottei kausien vaihtuminen muuta sivun rakennetta. */
+.napit button.ei-otteluita { color: var(--teksti-himmea); border-style: dashed; }
+.napit button.ei-otteluita[aria-pressed="true"] { color: #fff; border-style: solid; }
+@media (prefers-color-scheme: dark) {
+  .napit button.ei-otteluita[aria-pressed="true"] { color: #10241a; }
+}
+.napit button[aria-pressed="true"] {
+  background: var(--korostus);
+  border-color: var(--korostus);
+  color: #fff;
+}
+@media (prefers-color-scheme: dark) {
+  .napit button[aria-pressed="true"] { color: #10241a; font-weight: 600; }
+}
+
+#haku {
+  font: inherit;
+  padding: 7px 12px;
+  border: 1px solid var(--viiva);
+  border-radius: 999px;
+  background: var(--tausta);
+  color: var(--teksti);
+  width: 100%;
+}
+#haku:focus-visible { outline: 2px solid var(--korostus); outline-offset: 1px; }
+
+.osumat {
+  margin: 14px 2px 10px;
+  font-size: 13px;
+  color: var(--teksti-himmea);
+}
+
+/* --- ottelulista --- */
+
+.paiva { margin: 0 0 18px; }
+
+.paiva-otsikko {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  margin: 0;
+  padding: 10px 2px 8px;
+  background: var(--tausta);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: var(--teksti-himmea);
+  border-bottom: 1px solid var(--viiva);
+}
+
+.ottelu {
+  display: grid;
+  grid-template-columns: 58px 1fr auto;
+  gap: 4px 12px;
+  align-items: center;
+  padding: 13px 14px;
+  margin-top: 8px;
+  background: var(--kortti);
+  border: 1px solid var(--viiva);
+  border-radius: var(--pyoristys);
+  box-shadow: var(--varjo);
+}
+
+.kello {
+  grid-row: 1 / span 2;
+  font-size: 19px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  color: var(--korostus);
+}
+
+.joukkueet { font-weight: 600; }
+.joukkueet .vs { color: var(--teksti-himmea); font-weight: 400; padding: 0 2px; }
+.joukkueet .oma { color: var(--korostus); }
+
+.tiedot {
+  grid-column: 2;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 8px;
+  align-items: center;
+  font-size: 13px;
+  color: var(--teksti-himmea);
+}
+
+.merkki {
+  display: inline-block;
+  padding: 1px 8px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  background: var(--nurmi-vaalea);
+  color: var(--nurmi-tumma);
+}
+@media (prefers-color-scheme: dark) {
+  .merkki { color: var(--korostus); }
+}
+.merkki.futsal   { background: #eef0fa; color: #3a4590; }
+.merkki.salibandy{ background: #fdf0e3; color: #8a541c; }
+@media (prefers-color-scheme: dark) {
+  .merkki.futsal   { background: #1a1d30; color: #98a4e8; }
+  .merkki.salibandy{ background: #2a2015; color: var(--parketti); }
+}
+
+.lisaa {
+  grid-row: 1 / span 2;
+  grid-column: 3;
+  appearance: none;
+  border: 1px solid var(--viiva);
+  background: transparent;
+  color: var(--korostus);
+  border-radius: 999px;
+  padding: 7px 12px;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.lisaa:hover { border-color: var(--korostus); background: var(--nurmi-vaalea); }
+
+.tyhja {
+  padding: 32px 16px;
+  text-align: center;
+  color: var(--teksti-himmea);
+  background: var(--kortti);
+  border: 1px dashed var(--viiva);
+  border-radius: var(--pyoristys);
+}
+
+/* --- kalenteritilaus --- */
+
+.tilaus {
+  margin: 36px 0 8px;
+  padding: 20px 18px 8px;
+  background: var(--kortti);
+  border: 1px solid var(--viiva);
+  border-radius: var(--pyoristys);
+  box-shadow: var(--varjo);
+}
+.tilaus h2 { margin: 0 0 6px; font-size: 20px; }
+.tilaus-johdanto { margin: 0 0 16px; color: var(--teksti-himmea); font-size: 15px; }
+
+.kalenterit { list-style: none; margin: 0; padding: 0; }
+
+.kalenterit li {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  padding: 11px 0;
+  border-top: 1px solid var(--viiva);
+}
+.kalenterit li:first-child { border-top: 0; }
+
+/* Logopaikka varataan aina, myos seuralle jolta logoa ei viela ole -
+   muuten rivit hyppivat eri levyisiksi. */
+.kalenterit .logo,
+.kalenterit .logo-tyhja {
+  width: 36px;
+  height: 36px;
+  flex: 0 0 auto;
+}
+.kalenterit .logo { object-fit: contain; }
+.kalenterit .logo-tyhja {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--nurmi-vaalea);
+  color: var(--nurmi-tumma);
+  font-size: 11px;
+  font-weight: 700;
+}
+@media (prefers-color-scheme: dark) {
+  .kalenterit .logo-tyhja { color: var(--korostus); }
+}
+.kalenterit .nimi { flex: 1 1 130px; font-weight: 600; }
+.kalenterit .maara { font-size: 13px; color: var(--teksti-himmea); }
+
+.kalenterit a, .kalenterit button {
+  appearance: none;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 7px 13px;
+  border-radius: 999px;
+  border: 1px solid var(--korostus);
+  cursor: pointer;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.kalenterit a { background: var(--korostus); color: #fff; border-color: var(--korostus); }
+@media (prefers-color-scheme: dark) { .kalenterit a { color: #10241a; } }
+.kalenterit button { background: transparent; color: var(--korostus); }
+
+.ohje { margin: 14px 0 12px; }
+.ohje summary { cursor: pointer; font-weight: 600; color: var(--korostus); }
+.ohje-sisalto { padding-top: 8px; font-size: 15px; color: var(--teksti-himmea); }
+.ohje-sisalto p { margin: 0 0 10px; }
+
+.pikkuteksti { font-size: 13px; color: var(--teksti-himmea); }
+
+/* --- alaosa --- */
+
+.alaosa {
+  margin-top: 40px;
+  padding: 24px 0 40px;
+  border-top: 1px solid var(--viiva);
+  font-size: 14px;
+  color: var(--teksti-himmea);
+}
+.alaosa p { margin: 0 0 8px; }
+
+@media (max-width: 420px) {
+  .ottelu { grid-template-columns: 52px 1fr; }
+  .lisaa { grid-row: 3; grid-column: 1 / -1; justify-self: start; margin-top: 6px; }
+}

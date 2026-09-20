@@ -1,0 +1,81 @@
+name: Viikko-ohjelma ja pelipäivän muistutus
+
+# Maanantaisin koko viikon ohjelma, muina päivinä muistutus vain jos
+# Riihikoskella todella pelataan sinä päivänä.
+on:
+  schedule:
+    - cron: "0 4 * * *"       # 07.00 Suomen kesäaikaa, 06.00 talvella
+  workflow_dispatch:
+    inputs:
+      tila:
+        description: "viikko tai tanaan"
+        type: choice
+        options: [viikko, tanaan]
+        default: viikko
+      kuivaharjoitus:
+        description: "näytä teksti julkaisematta sitä Facebookiin"
+        type: boolean
+        default: true
+
+permissions:
+  contents: read
+  issues: write               # muistutus sähköpostiin GitHubin ilmoituksena
+
+jobs:
+  kooste:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Valitse tila
+        id: tila
+        run: |
+          if [ -n "${{ github.event.inputs.tila }}" ]; then
+            valinta="${{ github.event.inputs.tila }}"
+          elif [ "$(date -u +%u)" = "1" ]; then
+            valinta="viikko"
+          else
+            valinta="tanaan"
+          fi
+          echo "valinta=$valinta" >> "$GITHUB_OUTPUT"
+          echo "Tila: $valinta"
+
+      - name: Kokoa teksti
+        id: kooste
+        run: |
+          if python scripts/kooste.py --tila "${{ steps.tila.outputs.valinta }}" \
+               --tiedosto kooste.txt; then
+            echo "peleja=kylla" >> "$GITHUB_OUTPUT"
+          else
+            echo "peleja=ei" >> "$GITHUB_OUTPUT"
+            echo "Ei julkaistavaa - työ päättyy tähän."
+          fi
+
+      - name: Julkaise Facebook-sivulle
+        if: steps.kooste.outputs.peleja == 'kylla'
+        env:
+          FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
+          FB_PAGE_TOKEN: ${{ secrets.FB_PAGE_TOKEN }}
+        run: |
+          # Käsin käynnistetty ajo on oletuksena kuivaharjoitus, jotta tekstin
+          # voi tarkistaa ennen kuin se menee ulos.
+          if [ "${{ github.event.inputs.kuivaharjoitus }}" = "true" ]; then
+            python scripts/facebook.py --tiedosto kooste.txt --kuivaharjoitus
+          else
+            python scripts/facebook.py --tiedosto kooste.txt
+          fi
+
+      - name: Muistutus sähköpostiin
+        if: steps.kooste.outputs.peleja == 'kylla'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          osoite=$(gh issue create \
+            --title "Pelit Riihikoskella – $(date -u +%d.%m.%Y)" \
+            --body-file kooste.txt)
+          echo "Muistutus luotu: $osoite"
+          gh issue close "$osoite" --comment "Kooste lähetetty sähköpostiin."

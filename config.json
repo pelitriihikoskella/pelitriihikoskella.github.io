@@ -1,0 +1,112 @@
+{
+  "sivu": {
+    "nimi": "Pelit Riihikoskella",
+    "kuvaus": "Riihikosken urheilukentän ja Kisariihen tulevat pelit yhdellä sivulla.",
+    "aikavyohyke": "Europe/Helsinki",
+    "julkinen_osoite": "https://KAYTTAJATUNNUS.github.io/riihikoski-pelit",
+    "kuva_lahde": ""
+  },
+  "suodattimet": {
+    "lajit": [
+      "Jalkapallo",
+      "Futsal",
+      "Salibandy"
+    ],
+    "paikat": [
+      {
+        "arvo": "Riihikosken urheilupuisto",
+        "nimi": "Urheilukenttä"
+      },
+      {
+        "arvo": "Kisariihi",
+        "nimi": "Kisariihi"
+      }
+    ]
+  },
+  "lahteet": [
+    {
+      "id": "spl",
+      "nimi": "Palloliitto (jalkapallo ja futsal)",
+      "api": "https://spl.torneopal.net/taso/rest",
+      "avain_ymparistomuuttuja": "SPL_API_KEY",
+      "kyselyt": [
+        {
+          "laji": "Jalkapallo",
+          "paikka": "Riihikosken urheilupuisto",
+          "linkki": "https://tulospalvelu.palloliitto.fi/location/133/fixtures",
+          "params": {
+            "venue_id": "133"
+          }
+        },
+        {
+          "laji": "Futsal",
+          "paikka": "Kisariihi",
+          "linkki": "https://tulospalvelu.palloliitto.fi/venue/865/fixtures",
+          "params": {
+            "venue_id": "865"
+          }
+        }
+      ],
+      "ottelu_linkki": "https://tulospalvelu.palloliitto.fi/match/{id}"
+    },
+    {
+      "id": "salibandy",
+      "nimi": "Salibandyliitto",
+      "api": "https://salibandy-api.torneopal.net/taso/rest",
+      "avain_ymparistomuuttuja": "SALIBANDY_API_KEY",
+      "kyselyt": [
+        {
+          "laji": "Salibandy",
+          "paikka": "Kisariihi",
+          "linkki": "https://tulospalvelu.salibandy.fi/location/734827322/fixtures",
+          "params": {
+            "location_id": "734827322"
+          }
+        }
+      ],
+      "ottelu_linkki": "https://tulospalvelu.salibandy.fi/match/{id}"
+    }
+  ],
+  "seurat": [
+    {
+      "id": "poka",
+      "nimi": "Pöytyän Kaima",
+      "lyhenne": "PöKa",
+      "tunnisteet": [
+        "PöKa",
+        "Pöytyän Kaima",
+        "Poytyan Kaima",
+        "PoKa"
+      ],
+      "logo": "kuvat/poka.png"
+    },
+    {
+      "id": "pou",
+      "nimi": "Pöytyän Urheilijat",
+      "lyhenne": "PöU",
+      "tunnisteet": [
+        "PöU",
+        "Pöytyän Urheilijat",
+        "Poytyan Urheilijat",
+        "PoU"
+      ],
+      "logo": "kuvat/pou.png"
+    }
+  ],
+  "kalenterit": [
+    {
+      "tiedosto": "poka.ics",
+      "nimi": "Pöytyän Kaima – kotipelit",
+      "suodatin": {
+        "seura": "poka"
+      }
+    },
+    {
+      "tiedosto": "pou.ics",
+      "nimi": "Pöytyän Urheilijat – kotipelit",
+      "suodatin": {
+        "seura": "pou"
+      }
+    }
+  ]
+}

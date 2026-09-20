@@ -1,0 +1,60 @@
+name: Päivitä pelit
+
+# Hakee ottelut Torneopalista ja julkaisee sivun GitHub Pagesiin.
+on:
+  schedule:
+    - cron: "0 3 * * *"      # joka yö klo 05/06 Suomen aikaa
+  workflow_dispatch:          # "Run workflow" -nappi Actions-välilehdellä
+  push:
+    branches: [main]
+
+permissions:
+  contents: write      # tarvitaan päivittyneen datan tallentamiseen
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  paivita:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Hae ottelut ja rakenna kalenterit
+        env:
+          SPL_API_KEY: ${{ secrets.SPL_API_KEY }}
+          SALIBANDY_API_KEY: ${{ secrets.SALIBANDY_API_KEY }}
+        run: python scripts/paivita.py
+
+      - name: Tallenna päivittynyt data
+        run: |
+          if [ -n "$(git status --porcelain docs/)" ]; then
+            git config user.name  "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add docs/
+            git commit -m "Päivitä ottelutiedot"
+            git push
+          else
+            echo "Ei muutoksia."
+          fi
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+
+  julkaise:
+    needs: paivita
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.julkaisu.outputs.page_url }}
+    steps:
+      - id: julkaisu
+        uses: actions/deploy-pages@v4
