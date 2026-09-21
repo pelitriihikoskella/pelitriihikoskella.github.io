@@ -190,9 +190,12 @@ def tunnista_seurat(ottelu, seurat):
     loydetyt = []
     for seura in seurat:
         for tunniste in seura["tunnisteet"]:
-            # sanarajaus, jottei lyhenne osu vahingossa keskelle toista nimea
-            kaava = (r"(?<![0-9A-Za-zÅÄÖåäö])" + re.escape(tunniste) +
-                     r"(?![0-9A-Za-zÅÄÖåäö])")
+            # Sanarajaus, jottei lyhenne osu vahingossa keskelle toista nimea.
+            # Numerot sallitaan kiinni lyhenteessa, koska joukkueet nimetaan
+            # usein "Pöka2011/12" tai "PöU2" - kirjaimet eivat kelpaa, jottei
+            # "PöKa" osu johonkin pidempaan sanaan.
+            kaava = (r"(?<![A-Za-zÅÄÖåäö])" + re.escape(tunniste) +
+                     r"(?![A-Za-zÅÄÖåäö])")
             if re.search(kaava, kentat, re.IGNORECASE):
                 loydetyt.append(seura["id"])
                 break
