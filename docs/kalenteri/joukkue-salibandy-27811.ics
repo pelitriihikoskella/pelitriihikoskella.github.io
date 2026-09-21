@@ -1,0 +1,64 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Pelit Riihikoskella//FI
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:PöU – U12 tytöt LR (syksy)
+X-WR-TIMEZONE:Europe/Helsinki
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VTIMEZONE
+TZID:Europe/Helsinki
+X-LIC-LOCATION:Europe/Helsinki
+BEGIN:STANDARD
+DTSTART:19701025T040000
+TZOFFSETFROM:+0300
+TZOFFSETTO:+0200
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+TZNAME:EET
+END:STANDARD
+BEGIN:DAYLIGHT
+DTSTART:19700329T030000
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0300
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+TZNAME:EEST
+END:DAYLIGHT
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:salibandy-958265@riihikoski-pelit
+DTSTAMP:20260921T150909Z
+DTSTART;TZID=Europe/Helsinki:20261017T100000
+DTEND;TZID=Europe/Helsinki:20261017T113000
+SUMMARY:U12 tytöt LR (syksy): PöU - Karhut
+LOCATION:Kisariihi Pöytyä\, Riihikoski
+DESCRIPTION:Salibandy - U12 tytöt LR (syksy)\nhttps://tulospalvelu.saliban
+ dy.fi/match/958265
+CATEGORIES:Salibandy
+URL:https://tulospalvelu.salibandy.fi/match/958265
+END:VEVENT
+BEGIN:VEVENT
+UID:salibandy-958267@riihikoski-pelit
+DTSTAMP:20260921T150909Z
+DTSTART;TZID=Europe/Helsinki:20261017T113000
+DTEND;TZID=Europe/Helsinki:20261017T130000
+SUMMARY:U12 tytöt LR (syksy): SalBa - PöU
+LOCATION:Kisariihi Pöytyä\, Riihikoski
+DESCRIPTION:Salibandy - U12 tytöt LR (syksy)\nhttps://tulospalvelu.saliban
+ dy.fi/match/958267
+CATEGORIES:Salibandy
+URL:https://tulospalvelu.salibandy.fi/match/958267
+END:VEVENT
+BEGIN:VEVENT
+UID:salibandy-958273@riihikoski-pelit
+DTSTAMP:20260921T150909Z
+DTSTART;TZID=Europe/Helsinki:20261017T153500
+DTEND;TZID=Europe/Helsinki:20261017T170500
+SUMMARY:U12 tytöt LR (syksy): PöU - SBS Wirmo Keltainen
+LOCATION:Kisariihi Pöytyä\, Riihikoski
+DESCRIPTION:Salibandy - U12 tytöt LR (syksy)\nhttps://tulospalvelu.saliban
+ dy.fi/match/958273
+CATEGORIES:Salibandy
+URL:https://tulospalvelu.salibandy.fi/match/958273
+END:VEVENT
+END:VCALENDAR

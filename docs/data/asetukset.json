@@ -66,6 +66,96 @@
    "suodatin": {
     "seura": "pou"
    }
+  },
+  {
+   "tiedosto": "joukkue-salibandy-31725.ics",
+   "nimi": "PöU 2 – N3DIV LR",
+   "suodatin": {
+    "joukkue": "salibandy-31725"
+   },
+   "seura": "pou",
+   "joukkue": true
+  },
+  {
+   "tiedosto": "joukkue-salibandy-29678.ics",
+   "nimi": "PöU 3 – N4DIV LR",
+   "suodatin": {
+    "joukkue": "salibandy-29678"
+   },
+   "seura": "pou",
+   "joukkue": true
+  },
+  {
+   "tiedosto": "joukkue-salibandy-25279.ics",
+   "nimi": "PöU Keltainen – U16 pojat LR H",
+   "suodatin": {
+    "joukkue": "salibandy-25279"
+   },
+   "seura": "pou",
+   "joukkue": true
+  },
+  {
+   "tiedosto": "joukkue-salibandy-27809.ics",
+   "nimi": "PöU Musta – U15 pojat LR H",
+   "suodatin": {
+    "joukkue": "salibandy-27809"
+   },
+   "seura": "pou",
+   "joukkue": true
+  },
+  {
+   "tiedosto": "joukkue-salibandy-25274.ics",
+   "nimi": "PöU Musta – U16 pojat kilpa LR+SS",
+   "suodatin": {
+    "joukkue": "salibandy-25274"
+   },
+   "seura": "pou",
+   "joukkue": true
+  },
+  {
+   "tiedosto": "joukkue-salibandy-2837.ics",
+   "nimi": "PöU – M3DIV LR",
+   "suodatin": {
+    "joukkue": "salibandy-2837"
+   },
+   "seura": "pou",
+   "joukkue": true
+  },
+  {
+   "tiedosto": "joukkue-salibandy-2863.ics",
+   "nimi": "PöU – Naisten Suomisarja, lohko A",
+   "suodatin": {
+    "joukkue": "salibandy-2863"
+   },
+   "seura": "pou",
+   "joukkue": true
+  },
+  {
+   "tiedosto": "joukkue-salibandy-27811.ics",
+   "nimi": "PöU – U12 tytöt LR (syksy)",
+   "suodatin": {
+    "joukkue": "salibandy-27811"
+   },
+   "seura": "pou",
+   "joukkue": true
+  },
+  {
+   "tiedosto": "joukkue-salibandy-33068.ics",
+   "nimi": "PöU – U14 tytöt LR valkoinen",
+   "suodatin": {
+    "joukkue": "salibandy-33068"
+   },
+   "seura": "pou",
+   "joukkue": true
+  },
+  {
+   "tiedosto": "joukkue-salibandy-29507.ics",
+   "nimi": "PöU – U16-17 tytöt LR",
+   "suodatin": {
+    "joukkue": "salibandy-29507"
+   },
+   "seura": "pou",
+   "joukkue": true
   }
  ]
 }

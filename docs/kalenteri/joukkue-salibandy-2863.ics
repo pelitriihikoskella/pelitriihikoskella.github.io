@@ -1,0 +1,100 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Pelit Riihikoskella//FI
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:PöU – Naisten Suomisarja\, lohko A
+X-WR-TIMEZONE:Europe/Helsinki
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VTIMEZONE
+TZID:Europe/Helsinki
+X-LIC-LOCATION:Europe/Helsinki
+BEGIN:STANDARD
+DTSTART:19701025T040000
+TZOFFSETFROM:+0300
+TZOFFSETTO:+0200
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+TZNAME:EET
+END:STANDARD
+BEGIN:DAYLIGHT
+DTSTART:19700329T030000
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0300
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+TZNAME:EEST
+END:DAYLIGHT
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:salibandy-933963@riihikoski-pelit
+DTSTAMP:20260921T150909Z
+DTSTART;TZID=Europe/Helsinki:20261010T100000
+DTEND;TZID=Europe/Helsinki:20261010T113000
+SUMMARY:Naisten Suomisarja\, lohko A: Nystars - PöU
+LOCATION:Kisariihi Pöytyä\, Riihikoski
+DESCRIPTION:Salibandy - Naisten Suomisarja\, lohko A\nhttps://tulospalvelu.
+ salibandy.fi/match/933963
+CATEGORIES:Salibandy
+URL:https://tulospalvelu.salibandy.fi/match/933963
+END:VEVENT
+BEGIN:VEVENT
+UID:salibandy-933966@riihikoski-pelit
+DTSTAMP:20260921T150909Z
+DTSTART;TZID=Europe/Helsinki:20261010T150000
+DTEND;TZID=Europe/Helsinki:20261010T163000
+SUMMARY:Naisten Suomisarja\, lohko A: PöU - AFC Campus
+LOCATION:Kisariihi Pöytyä\, Riihikoski
+DESCRIPTION:Salibandy - Naisten Suomisarja\, lohko A\nhttps://tulospalvelu.
+ salibandy.fi/match/933966
+CATEGORIES:Salibandy
+URL:https://tulospalvelu.salibandy.fi/match/933966
+END:VEVENT
+BEGIN:VEVENT
+UID:salibandy-933987@riihikoski-pelit
+DTSTAMP:20260921T150909Z
+DTSTART;TZID=Europe/Helsinki:20261219T140000
+DTEND;TZID=Europe/Helsinki:20261219T153000
+SUMMARY:Naisten Suomisarja\, lohko A: PöU - SBSV
+LOCATION:Kisariihi Pöytyä\, Riihikoski
+DESCRIPTION:Salibandy - Naisten Suomisarja\, lohko A\nhttps://tulospalvelu.
+ salibandy.fi/match/933987
+CATEGORIES:Salibandy
+URL:https://tulospalvelu.salibandy.fi/match/933987
+END:VEVENT
+BEGIN:VEVENT
+UID:salibandy-933990@riihikoski-pelit
+DTSTAMP:20260921T150909Z
+DTSTART;TZID=Europe/Helsinki:20261219T190000
+DTEND;TZID=Europe/Helsinki:20261219T203000
+SUMMARY:Naisten Suomisarja\, lohko A: HIFK - PöU
+LOCATION:Kisariihi Pöytyä\, Riihikoski
+DESCRIPTION:Salibandy - Naisten Suomisarja\, lohko A\nhttps://tulospalvelu.
+ salibandy.fi/match/933990
+CATEGORIES:Salibandy
+URL:https://tulospalvelu.salibandy.fi/match/933990
+END:VEVENT
+BEGIN:VEVENT
+UID:salibandy-934011@riihikoski-pelit
+DTSTAMP:20260921T150909Z
+DTSTART;TZID=Europe/Helsinki:20270213T100000
+DTEND;TZID=Europe/Helsinki:20270213T113000
+SUMMARY:Naisten Suomisarja\, lohko A: AFC Campus - PöU
+LOCATION:Kisariihi Pöytyä\, Riihikoski
+DESCRIPTION:Salibandy - Naisten Suomisarja\, lohko A\nhttps://tulospalvelu.
+ salibandy.fi/match/934011
+CATEGORIES:Salibandy
+URL:https://tulospalvelu.salibandy.fi/match/934011
+END:VEVENT
+BEGIN:VEVENT
+UID:salibandy-934013@riihikoski-pelit
+DTSTAMP:20260921T150909Z
+DTSTART;TZID=Europe/Helsinki:20270213T143000
+DTEND;TZID=Europe/Helsinki:20270213T160000
+SUMMARY:Naisten Suomisarja\, lohko A: PöU - Nystars
+LOCATION:Kisariihi Pöytyä\, Riihikoski
+DESCRIPTION:Salibandy - Naisten Suomisarja\, lohko A\nhttps://tulospalvelu.
+ salibandy.fi/match/934013
+CATEGORIES:Salibandy
+URL:https://tulospalvelu.salibandy.fi/match/934013
+END:VEVENT
+END:VCALENDAR

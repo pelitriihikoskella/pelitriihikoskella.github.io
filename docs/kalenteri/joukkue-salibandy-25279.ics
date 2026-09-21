@@ -1,0 +1,76 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Pelit Riihikoskella//FI
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:PöU Keltainen – U16 pojat LR H
+X-WR-TIMEZONE:Europe/Helsinki
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VTIMEZONE
+TZID:Europe/Helsinki
+X-LIC-LOCATION:Europe/Helsinki
+BEGIN:STANDARD
+DTSTART:19701025T040000
+TZOFFSETFROM:+0300
+TZOFFSETTO:+0200
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+TZNAME:EET
+END:STANDARD
+BEGIN:DAYLIGHT
+DTSTART:19700329T030000
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0300
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+TZNAME:EEST
+END:DAYLIGHT
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:salibandy-944164@riihikoski-pelit
+DTSTAMP:20260921T150909Z
+DTSTART;TZID=Europe/Helsinki:20261024T140000
+DTEND;TZID=Europe/Helsinki:20261024T153000
+SUMMARY:U16 pojat LR H: PöU Keltainen - Koitto/Satabandy P16
+LOCATION:Kisariihi Pöytyä\, Riihikoski
+DESCRIPTION:Salibandy - U16 pojat LR H\nhttps://tulospalvelu.salibandy.fi/m
+ atch/944164
+CATEGORIES:Salibandy
+URL:https://tulospalvelu.salibandy.fi/match/944164
+END:VEVENT
+BEGIN:VEVENT
+UID:salibandy-944169@riihikoski-pelit
+DTSTAMP:20260921T150909Z
+DTSTART;TZID=Europe/Helsinki:20261024T190000
+DTEND;TZID=Europe/Helsinki:20261024T203000
+SUMMARY:U16 pojat LR H: KK-V - PöU Keltainen
+LOCATION:Kisariihi Pöytyä\, Riihikoski
+DESCRIPTION:Salibandy - U16 pojat LR H\nhttps://tulospalvelu.salibandy.fi/m
+ atch/944169
+CATEGORIES:Salibandy
+URL:https://tulospalvelu.salibandy.fi/match/944169
+END:VEVENT
+BEGIN:VEVENT
+UID:salibandy-944200@riihikoski-pelit
+DTSTAMP:20260921T150909Z
+DTSTART;TZID=Europe/Helsinki:20270320T100000
+DTEND;TZID=Europe/Helsinki:20270320T113000
+SUMMARY:U16 pojat LR H: PöU Keltainen - SalBa
+LOCATION:Kisariihi Pöytyä\, Riihikoski
+DESCRIPTION:Salibandy - U16 pojat LR H\nhttps://tulospalvelu.salibandy.fi/m
+ atch/944200
+CATEGORIES:Salibandy
+URL:https://tulospalvelu.salibandy.fi/match/944200
+END:VEVENT
+BEGIN:VEVENT
+UID:salibandy-944205@riihikoski-pelit
+DTSTAMP:20260921T150909Z
+DTSTART;TZID=Europe/Helsinki:20270320T150000
+DTEND;TZID=Europe/Helsinki:20270320T163000
+SUMMARY:U16 pojat LR H: SB Somero - PöU Keltainen
+LOCATION:Kisariihi Pöytyä\, Riihikoski
+DESCRIPTION:Salibandy - U16 pojat LR H\nhttps://tulospalvelu.salibandy.fi/m
+ atch/944205
+CATEGORIES:Salibandy
+URL:https://tulospalvelu.salibandy.fi/match/944205
+END:VEVENT
+END:VCALENDAR

@@ -159,6 +159,20 @@ kirjoitusasu listaan.
 > Jos seuran virallinen nimi tai lyhenne tulospalvelussa on toinen, korjaa
 > `nimi`, `lyhenne` ja `tunnisteet` — muuten PöKa-kalenteri jää tyhjäksi.
 
+**Joukkuekalenterit syntyvät itsestään.** Jokaiselle `seurat`-listan seuran
+joukkueelle, joka pelaa näissä paikoissa, kirjoitetaan oma
+`joukkue-<lähde>-<joukkue_id>.ics`. Näitä ei luetella configissa: joukkueet
+vaihtuvat kausittain, ja käsin ylläpidetty lista vanhenisi heti.
+
+Joukkue tunnistetaan **tunnisteella, ei nimellä**. PöU:lla on kymmenen
+joukkuetta Kisariihessä, ja niistä viisi on nimeltään pelkkä *PöU* — naiset,
+miesten kolmonen sekä kolme juniorijoukkuetta. Kalenterin nimeen liitetään
+siksi myös sarja: *PöU – Naisten Suomisarja, lohko A*.
+
+Kalenteri, jota ei enää synny, poistetaan automaattisesti. Sivulla joukkueet
+ovat avattavan otsikon takana, jottei tilauslistasta tule kymmenien rivien
+mittaista.
+
 **Kalenterit** — `kalenterit[]`. Jokainen rivi tuottaa yhden `.ics`-tiedoston.
 Suodattimena voi käyttää `paikka`, `laji` ja `seura` -kenttiä, yhdessä tai
 erikseen. Tyhjä suodatin `{}` tarkoittaa kaikkia otteluita — sillä saa

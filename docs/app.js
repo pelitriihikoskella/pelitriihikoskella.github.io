@@ -201,6 +201,10 @@
     if (suodatin.seura && (ottelu.seurat || []).indexOf(suodatin.seura) === -1) {
       return false;
     }
+    if (suodatin.joukkue && suodatin.joukkue !== ottelu.koti_id
+        && suodatin.joukkue !== ottelu.vieras_id) {
+      return false;
+    }
     return true;
   }
 
@@ -208,49 +212,86 @@
     var lista = document.getElementById("kalenterit");
     lista.textContent = "";
 
+    var seurakohtaiset = [];
+    var joukkueittain = {};
     tila.kalenterit.forEach(function (kalenteri) {
-      var maara = tila.ottelut.filter(function (o) {
-        return sopiiSuodattimeen(o, kalenteri.suodatin || {});
-      }).length;
-
-      // Myös tyhjä kalenteri kannattaa tarjota: sen voi tilata nyt, ja ottelut
-      // ilmestyvät siihen itsestään kun kausi alkaa.
-      var rivi = elementti("li");
-
-      // Seuran logo, jos kalenteri koskee yhtä seuraa ja logo on asetettu.
-      var seura = tila.seurat.filter(function (s) {
-        return s.id === (kalenteri.suodatin || {}).seura;
-      })[0];
-      if (seura && seura.logo) {
-        var logo = document.createElement("img");
-        logo.className = "logo";
-        logo.src = seura.logo;
-        logo.alt = "";
-        logo.loading = "lazy";
-        rivi.appendChild(logo);
-      } else if (seura) {
-        rivi.appendChild(elementti("span", "logo-tyhja", seura.lyhenne));
+      if (kalenteri.joukkue) {
+        var avain = kalenteri.seura || "muu";
+        (joukkueittain[avain] = joukkueittain[avain] || []).push(kalenteri);
+      } else {
+        seurakohtaiset.push(kalenteri);
       }
+    });
 
-      rivi.appendChild(elementti("span", "nimi", kalenteri.nimi));
-      rivi.appendChild(elementti("span", "maara", maara
-        ? maara + (maara === 1 ? " ottelu" : " ottelua")
-        : "ei vielä otteluita"));
+    seurakohtaiset.forEach(function (kalenteri) {
+      lista.appendChild(kalenteriRivi(kalenteri));
+    });
 
-      var osoite = kalenteriOsoite(kalenteri.tiedosto);
-      var tilaa = elementti("a", null, "Tilaa kalenteri");
-      tilaa.href = osoite.replace(/^https?:/, "webcal:");
-      rivi.appendChild(tilaa);
+    /* Joukkuekalenterit avattavan otsikon alle: niitä on kymmeniä, eikä
+       kukaan selaa niitä läpi - oman joukkueen etsii se, joka sitä hakee. */
+    tila.seurat.forEach(function (seura) {
+      var omat = joukkueittain[seura.id];
+      if (!omat || !omat.length) { return; }
 
-      var kopioi = elementti("button", null, "Kopioi osoite");
-      kopioi.type = "button";
-      kopioi.addEventListener("click", function () {
-        kopioiLeikepoydalle(osoite, kopioi);
+      var rivi = elementti("li", "joukkueryhma");
+      var avattava = document.createElement("details");
+      avattava.appendChild(elementti("summary", null,
+        seura.lyhenne + ":n joukkueet (" + omat.length + ")"));
+
+      var sisalista = elementti("ul", "kalenterit sisalista");
+      omat.forEach(function (kalenteri) {
+        sisalista.appendChild(kalenteriRivi(kalenteri));
       });
-      rivi.appendChild(kopioi);
-
+      avattava.appendChild(sisalista);
+      rivi.appendChild(avattava);
       lista.appendChild(rivi);
     });
+  }
+
+  /* Myös tyhjä kalenteri kannattaa tarjota: sen voi tilata nyt, ja ottelut
+     ilmestyvät siihen itsestään kun kausi alkaa. */
+  function kalenteriRivi(kalenteri) {
+    var suodatin = kalenteri.suodatin || {};
+    var maara = tila.ottelut.filter(function (o) {
+      return sopiiSuodattimeen(o, suodatin);
+    }).length;
+
+    var rivi = elementti("li");
+
+    // Seuran logo vain seurakohtaisissa kalentereissa. Joukkuelistassa sama
+    // logo joka rivillä olisi pelkkää toistoa.
+    var seura = tila.seurat.filter(function (s) {
+      return s.id === suodatin.seura;
+    })[0];
+    if (seura && seura.logo) {
+      var logo = document.createElement("img");
+      logo.className = "logo";
+      logo.src = seura.logo;
+      logo.alt = "";
+      logo.loading = "lazy";
+      rivi.appendChild(logo);
+    } else if (seura) {
+      rivi.appendChild(elementti("span", "logo-tyhja", seura.lyhenne));
+    }
+
+    rivi.appendChild(elementti("span", "nimi", kalenteri.nimi));
+    rivi.appendChild(elementti("span", "maara", maara
+      ? maara + (maara === 1 ? " ottelu" : " ottelua")
+      : "ei vielä otteluita"));
+
+    var osoite = kalenteriOsoite(kalenteri.tiedosto);
+    var tilaa = elementti("a", null, "Tilaa kalenteri");
+    tilaa.href = osoite.replace(/^https?:/, "webcal:");
+    rivi.appendChild(tilaa);
+
+    var kopioi = elementti("button", null, "Kopioi osoite");
+    kopioi.type = "button";
+    kopioi.addEventListener("click", function () {
+      kopioiLeikepoydalle(osoite, kopioi);
+    });
+    rivi.appendChild(kopioi);
+
+    return rivi;
   }
 
   function kopioiLeikepoydalle(teksti, nappi) {

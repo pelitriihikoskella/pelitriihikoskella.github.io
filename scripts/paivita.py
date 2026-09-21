@@ -265,6 +265,11 @@ def normalisoi(raaka, lahde, kysely, seurat):
         "sarja": sarja,
         "koti": teksti(raaka.get("team_A_name")) or teksti(raaka.get("team_home_name")),
         "vieras": teksti(raaka.get("team_B_name")) or teksti(raaka.get("team_away_name")),
+        # Joukkuetunnisteet lahteen kanssa, koska sama numero voi tarkoittaa
+        # eri joukkuetta eri liitossa. Nimi ei riita tunnisteeksi: PoU:lla on
+        # viisi eri joukkuetta, joiden nimi on pelkka "PoU".
+        "koti_id": lahde["id"] + "-" + teksti(raaka.get("team_A_id")),
+        "vieras_id": lahde["id"] + "-" + teksti(raaka.get("team_B_id")),
         "koti_seura": teksti(raaka.get("club_A_name")),
         "vieras_seura": teksti(raaka.get("club_B_name")),
         "linkki": (pohja.replace("{id}", match_id) if pohja and match_id
@@ -393,22 +398,76 @@ def sopii(ottelu, suodatin):
         return False
     if "seura" in suodatin and suodatin["seura"] not in ottelu.get("seurat", []):
         return False
+    if "joukkue" in suodatin and suodatin["joukkue"] not in (
+            ottelu.get("koti_id"), ottelu.get("vieras_id")):
+        return False
     return True
+
+
+def joukkuekalenterit(config, ottelut):
+    """Yksi kalenteri jokaiselle seuran joukkueelle, joka pelaa naissa
+    paikoissa. Joukkue tunnistetaan tunnisteella eika nimella, koska samalla
+    seuralla on useita eri joukkueita samalla nimella - nimi taydennetaan
+    sarjalla, jotta kalenterit erottaa toisistaan."""
+    seurat = {s["id"] for s in config.get("seurat", [])}
+    loydetyt = {}
+
+    for ottelu in ottelut:
+        if not any(s in seurat for s in ottelu.get("seurat", [])):
+            continue
+        for tunnus, nimi in ((ottelu.get("koti_id"), ottelu.get("koti")),
+                             (ottelu.get("vieras_id"), ottelu.get("vieras"))):
+            if not tunnus or not tunnus.split("-", 1)[-1]:
+                continue
+            # Seura paatellaan joukkueen omasta nimesta, ei ottelusta: samassa
+            # ottelussa voi olla molemmat seurat.
+            omat = tunnista_seurat({"koti": nimi}, config.get("seurat", []))
+            if not omat:
+                continue        # vastustaja, ei oma joukkue
+            tiedot = loydetyt.setdefault(tunnus, {
+                "nimi": nimi, "seura": omat[0], "sarjat": {}})
+            sarja = ottelu.get("sarja") or ""
+            tiedot["sarjat"][sarja] = tiedot["sarjat"].get(sarja, 0) + 1
+
+    kalenterit = []
+    for tunnus, tiedot in loydetyt.items():
+        sarja = max(tiedot["sarjat"], key=tiedot["sarjat"].get) if tiedot["sarjat"] else ""
+        nimi = (tiedot["nimi"] + " – " + sarja) if sarja else tiedot["nimi"]
+        kalenterit.append({
+            "tiedosto": "joukkue-%s.ics" % tunnus,
+            "nimi": nimi,
+            "suodatin": {"joukkue": tunnus},
+            "seura": tiedot["seura"],
+            "joukkue": True,
+        })
+    return sorted(kalenterit, key=lambda k: (k["seura"], k["nimi"]))
 
 
 def rakenna_kalenterit(config, ottelut):
     os.makedirs(KALENTERIT, exist_ok=True)
+    kalenterit = list(config["kalenterit"]) + joukkuekalenterit(config, ottelut)
+
     tulos = []
-    for kalenteri in config["kalenterit"]:
+    for kalenteri in kalenterit:
         osuma = [o for o in ottelut if sopii(o, kalenteri["suodatin"])]
         kirjoita_ics(os.path.join(KALENTERIT, kalenteri["tiedosto"]),
                      kalenteri["nimi"], osuma)
         tulos.append((kalenteri["tiedosto"], len(osuma)))
-    kirjoita_asetukset(config)
+
+    # Joukkue voi lopettaa tai vaihtaa sarjaa kesken kauden. Poistetaan
+    # kalenterit, joita ei enaa synny - muuten tilaaja jaa tuijottamaan
+    # tiedostoa, joka ei koskaan paivity.
+    nykyiset = {k["tiedosto"] for k in kalenterit}
+    for tiedosto in sorted(os.listdir(KALENTERIT)):
+        if tiedosto.startswith("joukkue-") and tiedosto not in nykyiset:
+            os.remove(os.path.join(KALENTERIT, tiedosto))
+            print("  poistettu vanhentunut %s" % tiedosto)
+
+    kirjoita_asetukset(config, kalenterit)
     return tulos
 
 
-def kirjoita_asetukset(config):
+def kirjoita_asetukset(config, kalenterit=None):
     """Sivu tarvitsee configista vain seurat ja kalenterilistan - kirjoitetaan
     ne erikseen, jottei selaimelle tarvitse tarjoilla koko config.jsonia."""
     polku = os.path.join(os.path.dirname(DATA), "asetukset.json")
@@ -425,7 +484,8 @@ def kirjoita_asetukset(config):
         "seurat": [{"id": s["id"], "nimi": s["nimi"], "lyhenne": s["lyhenne"],
                     "logo": s.get("logo", "")}
                    for s in config.get("seurat", [])],
-        "kalenterit": config.get("kalenterit", []),
+        "kalenterit": (config.get("kalenterit", []) if kalenterit is None
+                       else kalenterit),
     }
     os.makedirs(os.path.dirname(polku), exist_ok=True)
     with open(polku, "w", encoding="utf-8") as tiedosto:
