@@ -265,14 +265,24 @@ tulos yhdistetään otteluihin ennen kalentereiden rakentamista.
   ajat `paivita.py`:n omalla koneella ja työ on ajanut välissä, tulee
   yhdistämisristiriita — näitä tiedostoja ei voi yhdistää rivi riviltä.
 
-  Ristiriita ratkeaa ottamalla GitHubin versio; se on tuoreempi ja se on se,
-  joka on julkaistu:
+  Tämä on automatisoitu. `.gitattributes` ohjaa gitin ottamaan näissä
+  tiedostoissa aina GitHubin version, mutta se vaatii yhden kerran ajettavan
+  asetuksen kussakin kloonissa:
+
+  ```bash
+  git config merge.pilvi.driver "cp -f %B %A"
+  ```
+
+  Ilman sitä ristiriita tulee näkyviin, ja sen saa käsin pois näin:
 
   ```bash
   git checkout --theirs docs/data/pelit.json docs/kalenteri/*.ics
   git add docs/data docs/kalenteri
   git commit
   ```
+
+  Kummassakaan tapauksessa mitään ei menetetä: työnkulku rakentaa nämä
+  tiedostot uudelleen heti seuraavassa ajossa.
 
   Helpointa on olla ajamatta `paivita.py`:tä paikallisesti lainkaan. Koodia
   muokatessa riittää `python scripts/paivita.py --vain-kalenteri`, joka ei

@@ -1,2 +1,8 @@
 # Kalenteritiedostot vaativat CRLF-rivinvaihdot, ei normalisointia
 *.ics -text
+
+# Koneen tuottamat tiedostot: ristiriidassa otetaan aina GitHubin versio,
+# koska työnkulku rakentaa ne joka tapauksessa uudelleen. Vaatii kerran ajettavan
+# asetuksen, ks. README kohta Muistettavaa.
+docs/data/*.json merge=pilvi
+docs/kalenteri/*.ics merge=pilvi
