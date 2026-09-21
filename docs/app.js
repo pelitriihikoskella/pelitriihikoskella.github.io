@@ -258,10 +258,11 @@
 
     var rivi = elementti("li");
 
-    // Seuran logo vain seurakohtaisissa kalentereissa. Joukkuelistassa sama
-    // logo joka rivillä olisi pelkkää toistoa.
+    // Seurakohtainen kalenteri kertoo seuran suodattimessa, joukkuekalenteri
+    // erillisessä kentässä - molemmissa logo tulee rivin eteen.
+    var seuraId = suodatin.seura || kalenteri.seura;
     var seura = tila.seurat.filter(function (s) {
-      return s.id === suodatin.seura;
+      return s.id === seuraId;
     })[0];
     if (seura && seura.logo) {
       var logo = document.createElement("img");

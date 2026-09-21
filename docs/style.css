@@ -385,6 +385,9 @@ a { color: var(--korostus); }
 }
 .kalenterit .sisalista li { padding-left: 12px; }
 .kalenterit .sisalista .nimi { font-weight: 500; }
+/* Joukkuerivin logo hieman pienempi, jotta seurataso erottuu joukkuetasosta */
+.kalenterit .sisalista .logo,
+.kalenterit .sisalista .logo-tyhja { width: 26px; height: 26px; font-size: 10px; }
 
 .ohje { margin: 14px 0 12px; }
 .ohje summary { cursor: pointer; font-weight: 600; color: var(--korostus); }
