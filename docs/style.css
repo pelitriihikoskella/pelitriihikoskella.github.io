@@ -388,6 +388,19 @@ a { color: var(--korostus); }
 }
 .alaosa p { margin: 0 0 8px; }
 
+/* Facebookin tunnus linkin edessa. Sisallytetty SVG:na, jotta se latautuu
+   sivun mukana eika vuoda kavijatietoa Metalle ennen kuin linkkia painetaan. */
+.some-merkki {
+  width: 1.05em;
+  height: 1.05em;
+  vertical-align: -.17em;
+  margin-right: .35em;
+  fill: #1877f2;
+}
+@media (prefers-color-scheme: dark) {
+  .some-merkki { fill: #5ba4ff; }
+}
+
 @media (max-width: 420px) {
   .ottelu { grid-template-columns: 52px 1fr; }
   .lisaa { grid-row: 3; grid-column: 1 / -1; justify-self: start; margin-top: 6px; }
