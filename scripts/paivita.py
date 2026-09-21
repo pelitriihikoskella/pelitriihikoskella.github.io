@@ -70,15 +70,78 @@ def paikkavaihtoehdot(params):
     return vaihtoehdot
 
 
+def kausi_nyt(nyt=None):
+    """Salibandykausi muodossa 2026-2027. Kausi vaihtuu heinakuussa."""
+    d = nyt or datetime.now()
+    return ("%d-%d" % (d.year, d.year + 1)) if d.month >= 7 \
+        else ("%d-%d" % (d.year - 1, d.year))
+
+
+def laajenna_params(params):
+    """Arvo "auto" korvataan kuluvalla kaudella."""
+    return {a: (kausi_nyt() if v == "auto" else v) for a, v in params.items()}
+
+
+def paikassa(ottelut, sisaltaa):
+    """Rajaa ottelut paikan nimen perusteella. Tarvitaan kun rajapinnasta ei
+    voi kysya paikkaa suoraan, vaan haku tehdaan sarjoittain."""
+    if not sisaltaa:
+        return ottelut
+    osa = sisaltaa.lower()
+    return [o for o in ottelut if osa in teksti(o.get("venue_name")).lower()]
+
+
+def kysy(lahde, params, avain):
+    vastaus = hae_json(lahde["api"], "getMatches", params, avain)
+    if vastaus.get("call", {}).get("status") == "error":
+        raise RuntimeError(vastaus["call"].get("error", "tuntematon virhe"))
+    return vastaus.get("matches") or []
+
+
+def hae_sarjoittain(lahde, kysely, avain):
+    """Haku silloin kun avain ei salli paikkahakua.
+
+    Salibandyliiton seura-avaimella getMatches vaatii sarjan ja joukkueen -
+    paikkaparametri ohitetaan hiljaisesti ja vastaus sisaltaa koko Suomen
+    ottelut. Siksi haetaan ensin seuran omat ottelut, poimitaan niista ne
+    sarjat joissa pelataan halutussa paikassa, ja haetaan jokainen sarja
+    kokonaan. Nain mukaan tulevat myos ottelut, joissa seura itse ei pelaa -
+    esimerkiksi turnauspaivien vieraiden keskinaiset pelit."""
+    sisaltaa = kysely.get("paikka_sisaltaa")
+    perus = laajenna_params(kysely["params"])
+    omat = paikassa(kysy(lahde, perus, avain), sisaltaa)
+
+    sarjat = sorted({(teksti(o.get("competition_id")), teksti(o.get("category_id")))
+                     for o in omat})
+    ottelut = {teksti(o.get("match_id")): o for o in omat}
+
+    for competition_id, category_id in sarjat:
+        if not (competition_id and category_id):
+            continue
+        try:
+            sarja = kysy(lahde, {"competition_id": competition_id,
+                                 "category_id": category_id}, avain)
+        except Exception:
+            continue      # yksi sarja voi puuttua ilman etta muut kaatuvat
+        for ottelu in paikassa(sarja, sisaltaa):
+            ottelut[teksti(ottelu.get("match_id"))] = ottelu
+
+    return list(ottelut.values()), dict(perus, sarjoja=len(sarjat))
+
+
 def hae_ottelut(lahde, kysely, avain):
     """Hakee yhden paikan tulevat ottelut.
 
     start_date karsii haun tahan paivaan - ilman sita rajapinta palauttaa koko
     historian (satoja otteluita), joista lahes kaikki heitettaisiin heti pois.
     Jos jokin asennus ei tunne start_datea, kokeillaan sama ilman sita."""
+    if kysely.get("paikka_sisaltaa"):
+        return hae_sarjoittain(lahde, kysely, avain)
+
     tanaan = datetime.now().strftime("%Y-%m-%d")
-    yritykset = [dict(p, start_date=tanaan) for p in paikkavaihtoehdot(kysely["params"])]
-    yritykset += paikkavaihtoehdot(kysely["params"])
+    perus = laajenna_params(kysely["params"])
+    yritykset = [dict(p, start_date=tanaan) for p in paikkavaihtoehdot(perus)]
+    yritykset += paikkavaihtoehdot(perus)
 
     viimeinen_virhe = None
     for params in yritykset:

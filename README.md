@@ -22,8 +22,8 @@ tilattavana kalenterina puhelimeen.
 
    Avaimet pyydetään seuran kautta Torneopalilta. Kerro pyynnössä mihin
    avainta käytetään (kylän julkinen pelikalenteri), mitkä paikat ovat
-   kyseessä ja että kyse on lukukäytöstä. Ilman avaimia sivu toimii, mutta
-   näyttää vain tiedostoon `scripts/siemendata.txt` käsin poimittua ohjelmaa.
+   kyseessä ja että kyse on lukukäytöstä. Ilman avainta lähde ohitetaan ja
+   sen vanha data säilyy.
 
 ---
 
@@ -93,7 +93,6 @@ Muita komentoja:
 | `python scripts/paivita.py` | hakee ottelut ja rakentaa sivun datan + kalenterit |
 | `python scripts/paivita.py --testi` | kokeilee rajapintaa, ei kirjoita tiedostoja |
 | `python scripts/paivita.py --vain-kalenteri` | rakentaa `.ics`-tiedostot olemassa olevasta datasta |
-| `python scripts/siemenna.py` | kirjoittaa väliaikaisen käsin poimitun ohjelman |
 | `python scripts/kooste.py --tila viikko` | tulostaa viikon ohjelman tekstinä |
 | `python scripts/kooste.py --tila tanaan` | tulostaa tämän päivän pelit |
 | `python scripts/facebook.py --tiedosto kooste.txt --kuivaharjoitus` | näyttää mitä Facebookiin julkaistaisiin |
@@ -107,11 +106,22 @@ Kaikki muutettava on yhdessä tiedostossa.
 **Paikat ja lähteet** — `lahteet[].kyselyt[]`. Numerot ovat samat kuin
 tulospalvelun osoitteessa:
 
-| Paikka | Osoite tulospalvelussa | Tunnus |
+| Paikka | Haku | Parametrit |
 |---|---|---|
-| Riihikosken urheilupuisto (jalkapallo) | `tulospalvelu.palloliitto.fi/location/133` | `venue_id: 133` |
-| Kisariihi (futsal) | `tulospalvelu.palloliitto.fi/venue/865` | `venue_id: 865` |
-| Kisariihi (salibandy) | `tulospalvelu.salibandy.fi/location/734827322` | `location_id: 734827322` |
+| Riihikosken urheilupuisto (jalkapallo) | paikan mukaan | `venue_id: 133` |
+| Kisariihi (futsal) | paikan mukaan | `venue_id: 865` |
+| Kisariihi (salibandy) | seuran ja sarjojen kautta | `club_id: 451`, `season_id: auto` |
+
+**Salibandy haetaan eri tavalla, ja syy on avaimessa.** Palloliiton seura-avain
+sallii paikkahaun, Salibandyliiton ei: sen `getMatches` vaatii sarjan ja
+joukkueen, ja paikkaparametri ohitetaan hiljaisesti niin että vastaukseen tulee
+koko Suomen ottelut. Siksi salibandykyselyssä on `paikka_sisaltaa`-kenttä, joka
+kytkee päälle kaksivaiheisen haun: ensin haetaan seuran omat ottelut, niistä
+poimitaan ne sarjat joissa pelataan Kisariihessä, ja jokainen sarja haetaan
+kokonaan. Näin mukaan tulevat myös turnauspäivien ottelut, joissa PöU ei pelaa.
+
+`season_id: auto` tarkoittaa kuluvaa kautta muodossa `2026-2027`; kausi
+vaihtuu heinäkuussa, eikä sitä tarvitse käydä vuosittain vaihtamassa.
 
 **Suodatinnapit** — `suodattimet`. Tässä luetellaan lajit ja paikat, jotka
 näkyvät sivun nappeina. Ne ovat kiinteä lista eivätkä riipu siitä, onko lajilla
@@ -163,8 +173,6 @@ alkua ja ottelut ilmestyvät siihen itsestään.
 ```
 config.json                  kaikki asetukset
 scripts/paivita.py           haku Torneopalista + .ics-tiedostojen teko
-scripts/siemenna.py          väliaikainen data ennen API-avaimia
-scripts/siemendata.txt       käsin poimittu ohjelma (poistettavissa myöhemmin)
 scripts/kooste.py            viikko- ja pelipäiväkoosteen teksti
 scripts/facebook.py          koosteen julkaisu Facebook-sivulle
 docs/                        julkaistava sivu (GitHub Pagesin juuri)
@@ -240,8 +248,8 @@ vaiheet 3–6. Graph APIn versio on `v26.0`; sen voi vaihtaa ympäristömuuttuja
 Sivu on rakennettu niin, että muut tapahtumat (esim. eläkeläisten kesätori,
 talkoot, kesäteatteri) voidaan lisätä samaan listaan ja samaan kalenteriin
 ilman että pelien haku muuttuu: ne ovat vain otteluita, joilla on eri `laji`
-ja oma lähde. Helpoin tapa on oma tekstitiedosto `scripts/siemendata.txt`:n
-tapaan ja sille pieni lukija, jonka tulos yhdistetään otteluihin.
+ja oma lähde. Helpoin tapa on oma tekstitiedosto ja sille pieni lukija, jonka
+tulos yhdistetään otteluihin ennen kalentereiden rakentamista.
 
 ---
 
@@ -267,5 +275,5 @@ tapaan ja sille pieni lukija, jonka tulos yhdistetään otteluihin.
   ```
 
   Helpointa on olla ajamatta `paivita.py`:tä paikallisesti lainkaan. Koodia
-  muokatessa riittää `python scripts/siemenna.py` tai
-  `python scripts/paivita.py --vain-kalenteri`, ja varsinaisen haun tekee pilvi.
+  muokatessa riittää `python scripts/paivita.py --vain-kalenteri`, joka ei
+  koske rajapintaan lainkaan. Varsinaisen haun tekee pilvi.

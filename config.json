@@ -52,7 +52,7 @@
     {
       "id": "salibandy",
       "nimi": "Salibandyliitto",
-      "api": "https://salibandy-api.torneopal.net/taso/rest",
+      "api": "https://salibandy.api.torneopal.com/taso/rest",
       "avain_ymparistomuuttuja": "SALIBANDY_API_KEY",
       "kyselyt": [
         {
@@ -60,8 +60,10 @@
           "paikka": "Kisariihi",
           "linkki": "https://tulospalvelu.salibandy.fi/location/734827322/fixtures",
           "params": {
-            "location_id": "734827322"
-          }
+            "club_id": "451",
+            "season_id": "auto"
+          },
+          "paikka_sisaltaa": "Kisariihi"
         }
       ],
       "ottelu_linkki": "https://tulospalvelu.salibandy.fi/match/{id}"
