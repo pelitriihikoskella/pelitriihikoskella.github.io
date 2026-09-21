@@ -26,459 +26,459 @@ TZNAME:EEST
 END:DAYLIGHT
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:salibandy-siemen-001@riihikoski-pelit
-DTSTAMP:20260921T031109Z
+UID:salibandy-952729@riihikoski-pelit
+DTSTAMP:20260921T143705Z
 DTSTART;TZID=Europe/Helsinki:20260926T100000
 DTEND;TZID=Europe/Helsinki:20260926T113000
 SUMMARY:U14 tytöt LR valkoinen: PöU - Karhut White
 LOCATION:Kisariihi Pöytyä\, Riihikoski
 DESCRIPTION:Salibandy - U14 tytöt LR valkoinen\nhttps://tulospalvelu.salib
- andy.fi/location/734827322/fixtures
+ andy.fi/match/952729
 CATEGORIES:Salibandy
-URL:https://tulospalvelu.salibandy.fi/location/734827322/fixtures
+URL:https://tulospalvelu.salibandy.fi/match/952729
 END:VEVENT
 BEGIN:VEVENT
-UID:salibandy-siemen-004@riihikoski-pelit
-DTSTAMP:20260921T031109Z
+UID:salibandy-952732@riihikoski-pelit
+DTSTAMP:20260921T143705Z
 DTSTART;TZID=Europe/Helsinki:20260926T140000
 DTEND;TZID=Europe/Helsinki:20260926T153000
 SUMMARY:U14 tytöt LR valkoinen: LaJy - PöU
 LOCATION:Kisariihi Pöytyä\, Riihikoski
 DESCRIPTION:Salibandy - U14 tytöt LR valkoinen\nhttps://tulospalvelu.salib
- andy.fi/location/734827322/fixtures
+ andy.fi/match/952732
 CATEGORIES:Salibandy
-URL:https://tulospalvelu.salibandy.fi/location/734827322/fixtures
+URL:https://tulospalvelu.salibandy.fi/match/952732
 END:VEVENT
 BEGIN:VEVENT
-UID:salibandy-siemen-005@riihikoski-pelit
-DTSTAMP:20260921T031109Z
+UID:salibandy-947395@riihikoski-pelit
+DTSTAMP:20260921T143705Z
 DTSTART;TZID=Europe/Helsinki:20261003T100000
 DTEND;TZID=Europe/Helsinki:20261003T113000
 SUMMARY:U16-17 tytöt LR: PöU - FBC Turku/SalPa U14T
 LOCATION:Kisariihi Pöytyä\, Riihikoski
 DESCRIPTION:Salibandy - U16-17 tytöt LR\nhttps://tulospalvelu.salibandy.fi
- /location/734827322/fixtures
+ /match/947395
 CATEGORIES:Salibandy
-URL:https://tulospalvelu.salibandy.fi/location/734827322/fixtures
+URL:https://tulospalvelu.salibandy.fi/match/947395
 END:VEVENT
 BEGIN:VEVENT
-UID:salibandy-siemen-010@riihikoski-pelit
-DTSTAMP:20260921T031109Z
+UID:salibandy-947400@riihikoski-pelit
+DTSTAMP:20260921T143705Z
 DTSTART;TZID=Europe/Helsinki:20261003T150000
 DTEND;TZID=Europe/Helsinki:20261003T163000
 SUMMARY:U16-17 tytöt LR: Karhut - PöU
 LOCATION:Kisariihi Pöytyä\, Riihikoski
 DESCRIPTION:Salibandy - U16-17 tytöt LR\nhttps://tulospalvelu.salibandy.fi
- /location/734827322/fixtures
+ /match/947400
 CATEGORIES:Salibandy
-URL:https://tulospalvelu.salibandy.fi/location/734827322/fixtures
+URL:https://tulospalvelu.salibandy.fi/match/947400
 END:VEVENT
 BEGIN:VEVENT
-UID:salibandy-siemen-011@riihikoski-pelit
-DTSTAMP:20260921T031109Z
+UID:salibandy-933963@riihikoski-pelit
+DTSTAMP:20260921T143705Z
 DTSTART;TZID=Europe/Helsinki:20261010T100000
 DTEND;TZID=Europe/Helsinki:20261010T113000
-SUMMARY:Naisten Suomisarja: Nystars - PöU
+SUMMARY:Naisten Suomisarja\, lohko A: Nystars - PöU
 LOCATION:Kisariihi Pöytyä\, Riihikoski
-DESCRIPTION:Salibandy - Naisten Suomisarja\nhttps://tulospalvelu.salibandy.
- fi/location/734827322/fixtures
+DESCRIPTION:Salibandy - Naisten Suomisarja\, lohko A\nhttps://tulospalvelu.
+ salibandy.fi/match/933963
 CATEGORIES:Salibandy
-URL:https://tulospalvelu.salibandy.fi/location/734827322/fixtures
+URL:https://tulospalvelu.salibandy.fi/match/933963
 END:VEVENT
 BEGIN:VEVENT
-UID:salibandy-siemen-014@riihikoski-pelit
-DTSTAMP:20260921T031109Z
+UID:salibandy-933966@riihikoski-pelit
+DTSTAMP:20260921T143705Z
 DTSTART;TZID=Europe/Helsinki:20261010T150000
 DTEND;TZID=Europe/Helsinki:20261010T163000
-SUMMARY:Naisten Suomisarja: PöU - AFC Campus
+SUMMARY:Naisten Suomisarja\, lohko A: PöU - AFC Campus
 LOCATION:Kisariihi Pöytyä\, Riihikoski
-DESCRIPTION:Salibandy - Naisten Suomisarja\nhttps://tulospalvelu.salibandy.
- fi/location/734827322/fixtures
+DESCRIPTION:Salibandy - Naisten Suomisarja\, lohko A\nhttps://tulospalvelu.
+ salibandy.fi/match/933966
 CATEGORIES:Salibandy
-URL:https://tulospalvelu.salibandy.fi/location/734827322/fixtures
+URL:https://tulospalvelu.salibandy.fi/match/933966
 END:VEVENT
 BEGIN:VEVENT
-UID:salibandy-siemen-015@riihikoski-pelit
-DTSTAMP:20260921T031109Z
+UID:salibandy-958265@riihikoski-pelit
+DTSTAMP:20260921T143705Z
 DTSTART;TZID=Europe/Helsinki:20261017T100000
 DTEND;TZID=Europe/Helsinki:20261017T113000
 SUMMARY:U12 tytöt LR (syksy): PöU - Karhut
 LOCATION:Kisariihi Pöytyä\, Riihikoski
 DESCRIPTION:Salibandy - U12 tytöt LR (syksy)\nhttps://tulospalvelu.saliban
- dy.fi/location/734827322/fixtures
+ dy.fi/match/958265
 CATEGORIES:Salibandy
-URL:https://tulospalvelu.salibandy.fi/location/734827322/fixtures
+URL:https://tulospalvelu.salibandy.fi/match/958265
 END:VEVENT
 BEGIN:VEVENT
-UID:salibandy-siemen-017@riihikoski-pelit
-DTSTAMP:20260921T031109Z
+UID:salibandy-958267@riihikoski-pelit
+DTSTAMP:20260921T143705Z
 DTSTART;TZID=Europe/Helsinki:20261017T113000
 DTEND;TZID=Europe/Helsinki:20261017T130000
 SUMMARY:U12 tytöt LR (syksy): SalBa - PöU
 LOCATION:Kisariihi Pöytyä\, Riihikoski
 DESCRIPTION:Salibandy - U12 tytöt LR (syksy)\nhttps://tulospalvelu.saliban
- dy.fi/location/734827322/fixtures
+ dy.fi/match/958267
 CATEGORIES:Salibandy
-URL:https://tulospalvelu.salibandy.fi/location/734827322/fixtures
+URL:https://tulospalvelu.salibandy.fi/match/958267
 END:VEVENT
 BEGIN:VEVENT
-UID:salibandy-siemen-023@riihikoski-pelit
-DTSTAMP:20260921T031109Z
+UID:salibandy-958273@riihikoski-pelit
+DTSTAMP:20260921T143705Z
 DTSTART;TZID=Europe/Helsinki:20261017T153500
 DTEND;TZID=Europe/Helsinki:20261017T170500
 SUMMARY:U12 tytöt LR (syksy): PöU - SBS Wirmo Keltainen
 LOCATION:Kisariihi Pöytyä\, Riihikoski
 DESCRIPTION:Salibandy - U12 tytöt LR (syksy)\nhttps://tulospalvelu.saliban
- dy.fi/location/734827322/fixtures
+ dy.fi/match/958273
 CATEGORIES:Salibandy
-URL:https://tulospalvelu.salibandy.fi/location/734827322/fixtures
+URL:https://tulospalvelu.salibandy.fi/match/958273
 END:VEVENT
 BEGIN:VEVENT
-UID:salibandy-siemen-024@riihikoski-pelit
-DTSTAMP:20260921T031109Z
+UID:salibandy-944164@riihikoski-pelit
+DTSTAMP:20260921T143705Z
 DTSTART;TZID=Europe/Helsinki:20261024T140000
 DTEND;TZID=Europe/Helsinki:20261024T153000
 SUMMARY:U16 pojat LR H: PöU Keltainen - Koitto/Satabandy P16
 LOCATION:Kisariihi Pöytyä\, Riihikoski
-DESCRIPTION:Salibandy - U16 pojat LR H\nhttps://tulospalvelu.salibandy.fi/l
- ocation/734827322/fixtures
+DESCRIPTION:Salibandy - U16 pojat LR H\nhttps://tulospalvelu.salibandy.fi/m
+ atch/944164
 CATEGORIES:Salibandy
-URL:https://tulospalvelu.salibandy.fi/location/734827322/fixtures
+URL:https://tulospalvelu.salibandy.fi/match/944164
 END:VEVENT
 BEGIN:VEVENT
-UID:salibandy-siemen-029@riihikoski-pelit
-DTSTAMP:20260921T031109Z
+UID:salibandy-944169@riihikoski-pelit
+DTSTAMP:20260921T143705Z
 DTSTART;TZID=Europe/Helsinki:20261024T190000
 DTEND;TZID=Europe/Helsinki:20261024T203000
 SUMMARY:U16 pojat LR H: KK-V - PöU Keltainen
 LOCATION:Kisariihi Pöytyä\, Riihikoski
-DESCRIPTION:Salibandy - U16 pojat LR H\nhttps://tulospalvelu.salibandy.fi/l
- ocation/734827322/fixtures
+DESCRIPTION:Salibandy - U16 pojat LR H\nhttps://tulospalvelu.salibandy.fi/m
+ atch/944169
 CATEGORIES:Salibandy
-URL:https://tulospalvelu.salibandy.fi/location/734827322/fixtures
+URL:https://tulospalvelu.salibandy.fi/match/944169
 END:VEVENT
 BEGIN:VEVENT
-UID:salibandy-siemen-030@riihikoski-pelit
-DTSTAMP:20260921T031109Z
+UID:salibandy-939986@riihikoski-pelit
+DTSTAMP:20260921T143705Z
 DTSTART;TZID=Europe/Helsinki:20261030T193000
 DTEND;TZID=Europe/Helsinki:20261030T210000
 SUMMARY:M3DIV LR: PöU - FC KYPS
 LOCATION:Kisariihi Pöytyä\, Riihikoski
-DESCRIPTION:Salibandy - M3DIV LR\nhttps://tulospalvelu.salibandy.fi/locatio
- n/734827322/fixtures
+DESCRIPTION:Salibandy - M3DIV LR\nhttps://tulospalvelu.salibandy.fi/match/9
+ 39986
 CATEGORIES:Salibandy
-URL:https://tulospalvelu.salibandy.fi/location/734827322/fixtures
+URL:https://tulospalvelu.salibandy.fi/match/939986
 END:VEVENT
 BEGIN:VEVENT
-UID:salibandy-siemen-033@riihikoski-pelit
-DTSTAMP:20260921T031109Z
+UID:salibandy-939989@riihikoski-pelit
+DTSTAMP:20260921T143705Z
 DTSTART;TZID=Europe/Helsinki:20261031T143000
 DTEND;TZID=Europe/Helsinki:20261031T160000
 SUMMARY:M3DIV LR: AFC Campus - PöU
 LOCATION:Kisariihi Pöytyä\, Riihikoski
-DESCRIPTION:Salibandy - M3DIV LR\nhttps://tulospalvelu.salibandy.fi/locatio
- n/734827322/fixtures
+DESCRIPTION:Salibandy - M3DIV LR\nhttps://tulospalvelu.salibandy.fi/match/9
+ 39989
 CATEGORIES:Salibandy
-URL:https://tulospalvelu.salibandy.fi/location/734827322/fixtures
+URL:https://tulospalvelu.salibandy.fi/match/939989
 END:VEVENT
 BEGIN:VEVENT
-UID:salibandy-siemen-034@riihikoski-pelit
-DTSTAMP:20260921T031109Z
+UID:salibandy-941815@riihikoski-pelit
+DTSTAMP:20260921T143705Z
 DTSTART;TZID=Europe/Helsinki:20261120T193000
 DTEND;TZID=Europe/Helsinki:20261120T210000
 SUMMARY:M3DIV LR: PöU - FC KYPS
 LOCATION:Kisariihi Pöytyä\, Riihikoski
-DESCRIPTION:Salibandy - M3DIV LR\nhttps://tulospalvelu.salibandy.fi/locatio
- n/734827322/fixtures
+DESCRIPTION:Salibandy - M3DIV LR\nhttps://tulospalvelu.salibandy.fi/match/9
+ 41815
 CATEGORIES:Salibandy
-URL:https://tulospalvelu.salibandy.fi/location/734827322/fixtures
+URL:https://tulospalvelu.salibandy.fi/match/941815
 END:VEVENT
 BEGIN:VEVENT
-UID:salibandy-siemen-035@riihikoski-pelit
-DTSTAMP:20260921T031109Z
+UID:salibandy-952612@riihikoski-pelit
+DTSTAMP:20260921T143705Z
 DTSTART;TZID=Europe/Helsinki:20261128T150000
 DTEND;TZID=Europe/Helsinki:20261128T163000
-SUMMARY:U15 pojat LR H: PöU Musta - SalBa valkoinen
+SUMMARY:U15 pojat LR H: PöU Musta - Salba valkoinen
 LOCATION:Kisariihi Pöytyä\, Riihikoski
-DESCRIPTION:Salibandy - U15 pojat LR H\nhttps://tulospalvelu.salibandy.fi/l
- ocation/734827322/fixtures
+DESCRIPTION:Salibandy - U15 pojat LR H\nhttps://tulospalvelu.salibandy.fi/m
+ atch/952612
 CATEGORIES:Salibandy
-URL:https://tulospalvelu.salibandy.fi/location/734827322/fixtures
+URL:https://tulospalvelu.salibandy.fi/match/952612
 END:VEVENT
 BEGIN:VEVENT
-UID:salibandy-siemen-038@riihikoski-pelit
-DTSTAMP:20260921T031109Z
+UID:salibandy-952615@riihikoski-pelit
+DTSTAMP:20260921T143705Z
 DTSTART;TZID=Europe/Helsinki:20261128T180000
 DTEND;TZID=Europe/Helsinki:20261128T193000
 SUMMARY:U15 pojat LR H: TPS Valkoinen - PöU Musta
 LOCATION:Kisariihi Pöytyä\, Riihikoski
-DESCRIPTION:Salibandy - U15 pojat LR H\nhttps://tulospalvelu.salibandy.fi/l
- ocation/734827322/fixtures
+DESCRIPTION:Salibandy - U15 pojat LR H\nhttps://tulospalvelu.salibandy.fi/m
+ atch/952615
 CATEGORIES:Salibandy
-URL:https://tulospalvelu.salibandy.fi/location/734827322/fixtures
+URL:https://tulospalvelu.salibandy.fi/match/952615
 END:VEVENT
 BEGIN:VEVENT
-UID:salibandy-siemen-040@riihikoski-pelit
-DTSTAMP:20260921T031109Z
+UID:salibandy-940004@riihikoski-pelit
+DTSTAMP:20260921T143705Z
 DTSTART;TZID=Europe/Helsinki:20261218T193000
 DTEND;TZID=Europe/Helsinki:20261218T210000
 SUMMARY:M3DIV LR: PöU - KBV
 LOCATION:Kisariihi Pöytyä\, Riihikoski
-DESCRIPTION:Salibandy - M3DIV LR\nhttps://tulospalvelu.salibandy.fi/locatio
- n/734827322/fixtures
+DESCRIPTION:Salibandy - M3DIV LR\nhttps://tulospalvelu.salibandy.fi/match/9
+ 40004
 CATEGORIES:Salibandy
-URL:https://tulospalvelu.salibandy.fi/location/734827322/fixtures
+URL:https://tulospalvelu.salibandy.fi/match/940004
 END:VEVENT
 BEGIN:VEVENT
-UID:salibandy-siemen-041@riihikoski-pelit
-DTSTAMP:20260921T031109Z
+UID:salibandy-933987@riihikoski-pelit
+DTSTAMP:20260921T143705Z
 DTSTART;TZID=Europe/Helsinki:20261219T140000
 DTEND;TZID=Europe/Helsinki:20261219T153000
-SUMMARY:Naisten Suomisarja: PöU - SBSV
+SUMMARY:Naisten Suomisarja\, lohko A: PöU - SBSV
 LOCATION:Kisariihi Pöytyä\, Riihikoski
-DESCRIPTION:Salibandy - Naisten Suomisarja\nhttps://tulospalvelu.salibandy.
- fi/location/734827322/fixtures
+DESCRIPTION:Salibandy - Naisten Suomisarja\, lohko A\nhttps://tulospalvelu.
+ salibandy.fi/match/933987
 CATEGORIES:Salibandy
-URL:https://tulospalvelu.salibandy.fi/location/734827322/fixtures
+URL:https://tulospalvelu.salibandy.fi/match/933987
 END:VEVENT
 BEGIN:VEVENT
-UID:salibandy-siemen-044@riihikoski-pelit
-DTSTAMP:20260921T031109Z
+UID:salibandy-933990@riihikoski-pelit
+DTSTAMP:20260921T143705Z
 DTSTART;TZID=Europe/Helsinki:20261219T190000
 DTEND;TZID=Europe/Helsinki:20261219T203000
-SUMMARY:Naisten Suomisarja: HIFK - PöU
+SUMMARY:Naisten Suomisarja\, lohko A: HIFK - PöU
 LOCATION:Kisariihi Pöytyä\, Riihikoski
-DESCRIPTION:Salibandy - Naisten Suomisarja\nhttps://tulospalvelu.salibandy.
- fi/location/734827322/fixtures
+DESCRIPTION:Salibandy - Naisten Suomisarja\, lohko A\nhttps://tulospalvelu.
+ salibandy.fi/match/933990
 CATEGORIES:Salibandy
-URL:https://tulospalvelu.salibandy.fi/location/734827322/fixtures
+URL:https://tulospalvelu.salibandy.fi/match/933990
 END:VEVENT
 BEGIN:VEVENT
-UID:salibandy-siemen-045@riihikoski-pelit
-DTSTAMP:20260921T031109Z
+UID:salibandy-946272@riihikoski-pelit
+DTSTAMP:20260921T143705Z
 DTSTART;TZID=Europe/Helsinki:20270109T100000
 DTEND;TZID=Europe/Helsinki:20270109T113000
 SUMMARY:U16 pojat kilpa LR+SS: PöU Musta - TPS
 LOCATION:Kisariihi Pöytyä\, Riihikoski
 DESCRIPTION:Salibandy - U16 pojat kilpa LR+SS\nhttps://tulospalvelu.saliban
- dy.fi/location/734827322/fixtures
+ dy.fi/match/946272
 CATEGORIES:Salibandy
-URL:https://tulospalvelu.salibandy.fi/location/734827322/fixtures
+URL:https://tulospalvelu.salibandy.fi/match/946272
 END:VEVENT
 BEGIN:VEVENT
-UID:salibandy-siemen-047@riihikoski-pelit
-DTSTAMP:20260921T031109Z
+UID:salibandy-946274@riihikoski-pelit
+DTSTAMP:20260921T143705Z
 DTSTART;TZID=Europe/Helsinki:20270109T130000
 DTEND;TZID=Europe/Helsinki:20270109T143000
 SUMMARY:U16 pojat kilpa LR+SS: FoSu Sininen - PöU Musta
 LOCATION:Kisariihi Pöytyä\, Riihikoski
 DESCRIPTION:Salibandy - U16 pojat kilpa LR+SS\nhttps://tulospalvelu.saliban
- dy.fi/location/734827322/fixtures
+ dy.fi/match/946274
 CATEGORIES:Salibandy
-URL:https://tulospalvelu.salibandy.fi/location/734827322/fixtures
+URL:https://tulospalvelu.salibandy.fi/match/946274
 END:VEVENT
 BEGIN:VEVENT
-UID:salibandy-siemen-048@riihikoski-pelit
-DTSTAMP:20260921T031109Z
+UID:salibandy-956693@riihikoski-pelit
+DTSTAMP:20260921T143705Z
 DTSTART;TZID=Europe/Helsinki:20270109T160000
 DTEND;TZID=Europe/Helsinki:20270109T173000
 SUMMARY:N4DIV LR: PöU 3 - Karhut 2
 LOCATION:Kisariihi Pöytyä\, Riihikoski
-DESCRIPTION:Salibandy - N4DIV LR\nhttps://tulospalvelu.salibandy.fi/locatio
- n/734827322/fixtures
+DESCRIPTION:Salibandy - N4DIV LR\nhttps://tulospalvelu.salibandy.fi/match/9
+ 56693
 CATEGORIES:Salibandy
-URL:https://tulospalvelu.salibandy.fi/location/734827322/fixtures
+URL:https://tulospalvelu.salibandy.fi/match/956693
 END:VEVENT
 BEGIN:VEVENT
-UID:salibandy-siemen-051@riihikoski-pelit
-DTSTAMP:20260921T031109Z
+UID:salibandy-956696@riihikoski-pelit
+DTSTAMP:20260921T143705Z
 DTSTART;TZID=Europe/Helsinki:20270109T190000
 DTEND;TZID=Europe/Helsinki:20270109T203000
 SUMMARY:N4DIV LR: RaSa - PöU 3
 LOCATION:Kisariihi Pöytyä\, Riihikoski
-DESCRIPTION:Salibandy - N4DIV LR\nhttps://tulospalvelu.salibandy.fi/locatio
- n/734827322/fixtures
+DESCRIPTION:Salibandy - N4DIV LR\nhttps://tulospalvelu.salibandy.fi/match/9
+ 56696
 CATEGORIES:Salibandy
-URL:https://tulospalvelu.salibandy.fi/location/734827322/fixtures
+URL:https://tulospalvelu.salibandy.fi/match/956696
 END:VEVENT
 BEGIN:VEVENT
-UID:salibandy-siemen-055@riihikoski-pelit
-DTSTAMP:20260921T031109Z
+UID:salibandy-940020@riihikoski-pelit
+DTSTAMP:20260921T143705Z
 DTSTART;TZID=Europe/Helsinki:20270116T150000
 DTEND;TZID=Europe/Helsinki:20270116T163000
 SUMMARY:M3DIV LR: TVA - PöU
 LOCATION:Kisariihi Pöytyä\, Riihikoski
-DESCRIPTION:Salibandy - M3DIV LR\nhttps://tulospalvelu.salibandy.fi/locatio
- n/734827322/fixtures
+DESCRIPTION:Salibandy - M3DIV LR\nhttps://tulospalvelu.salibandy.fi/match/9
+ 40020
 CATEGORIES:Salibandy
-URL:https://tulospalvelu.salibandy.fi/location/734827322/fixtures
+URL:https://tulospalvelu.salibandy.fi/match/940020
 END:VEVENT
 BEGIN:VEVENT
-UID:salibandy-siemen-057@riihikoski-pelit
-DTSTAMP:20260921T031109Z
+UID:salibandy-940022@riihikoski-pelit
+DTSTAMP:20260921T143705Z
 DTSTART;TZID=Europe/Helsinki:20270116T180000
 DTEND;TZID=Europe/Helsinki:20270116T193000
 SUMMARY:M3DIV LR: PöU - TVV
 LOCATION:Kisariihi Pöytyä\, Riihikoski
-DESCRIPTION:Salibandy - M3DIV LR\nhttps://tulospalvelu.salibandy.fi/locatio
- n/734827322/fixtures
+DESCRIPTION:Salibandy - M3DIV LR\nhttps://tulospalvelu.salibandy.fi/match/9
+ 40022
 CATEGORIES:Salibandy
-URL:https://tulospalvelu.salibandy.fi/location/734827322/fixtures
+URL:https://tulospalvelu.salibandy.fi/match/940022
 END:VEVENT
 BEGIN:VEVENT
-UID:salibandy-siemen-059@riihikoski-pelit
-DTSTAMP:20260921T031109Z
+UID:salibandy-947429@riihikoski-pelit
+DTSTAMP:20260921T143705Z
 DTSTART;TZID=Europe/Helsinki:20270130T140000
 DTEND;TZID=Europe/Helsinki:20270130T153000
 SUMMARY:U16-17 tytöt LR: PöU - Karhut
 LOCATION:Kisariihi Pöytyä\, Riihikoski
 DESCRIPTION:Salibandy - U16-17 tytöt LR\nhttps://tulospalvelu.salibandy.fi
- /location/734827322/fixtures
+ /match/947429
 CATEGORIES:Salibandy
-URL:https://tulospalvelu.salibandy.fi/location/734827322/fixtures
+URL:https://tulospalvelu.salibandy.fi/match/947429
 END:VEVENT
 BEGIN:VEVENT
-UID:salibandy-siemen-064@riihikoski-pelit
-DTSTAMP:20260921T031109Z
+UID:salibandy-947434@riihikoski-pelit
+DTSTAMP:20260921T143705Z
 DTSTART;TZID=Europe/Helsinki:20270130T190000
 DTEND;TZID=Europe/Helsinki:20270130T203000
 SUMMARY:U16-17 tytöt LR: SB Naantali - PöU
 LOCATION:Kisariihi Pöytyä\, Riihikoski
 DESCRIPTION:Salibandy - U16-17 tytöt LR\nhttps://tulospalvelu.salibandy.fi
- /location/734827322/fixtures
+ /match/947434
 CATEGORIES:Salibandy
-URL:https://tulospalvelu.salibandy.fi/location/734827322/fixtures
+URL:https://tulospalvelu.salibandy.fi/match/947434
 END:VEVENT
 BEGIN:VEVENT
-UID:salibandy-siemen-065@riihikoski-pelit
-DTSTAMP:20260921T031109Z
+UID:salibandy-934792@riihikoski-pelit
+DTSTAMP:20260921T143705Z
 DTSTART;TZID=Europe/Helsinki:20270206T090000
 DTEND;TZID=Europe/Helsinki:20270206T103000
 SUMMARY:N3DIV LR: PöU 2 - SBS Littoinen
 LOCATION:Kisariihi Pöytyä\, Riihikoski
-DESCRIPTION:Salibandy - N3DIV LR\nhttps://tulospalvelu.salibandy.fi/locatio
- n/734827322/fixtures
+DESCRIPTION:Salibandy - N3DIV LR\nhttps://tulospalvelu.salibandy.fi/match/9
+ 34792
 CATEGORIES:Salibandy
-URL:https://tulospalvelu.salibandy.fi/location/734827322/fixtures
+URL:https://tulospalvelu.salibandy.fi/match/934792
 END:VEVENT
 BEGIN:VEVENT
-UID:salibandy-siemen-068@riihikoski-pelit
-DTSTAMP:20260921T031109Z
+UID:salibandy-934795@riihikoski-pelit
+DTSTAMP:20260921T143705Z
 DTSTART;TZID=Europe/Helsinki:20270206T120000
 DTEND;TZID=Europe/Helsinki:20270206T133000
 SUMMARY:N3DIV LR: SB Naantali - PöU 2
 LOCATION:Kisariihi Pöytyä\, Riihikoski
-DESCRIPTION:Salibandy - N3DIV LR\nhttps://tulospalvelu.salibandy.fi/locatio
- n/734827322/fixtures
+DESCRIPTION:Salibandy - N3DIV LR\nhttps://tulospalvelu.salibandy.fi/match/9
+ 34795
 CATEGORIES:Salibandy
-URL:https://tulospalvelu.salibandy.fi/location/734827322/fixtures
+URL:https://tulospalvelu.salibandy.fi/match/934795
 END:VEVENT
 BEGIN:VEVENT
-UID:salibandy-siemen-070@riihikoski-pelit
-DTSTAMP:20260921T031109Z
+UID:salibandy-952694@riihikoski-pelit
+DTSTAMP:20260921T143705Z
 DTSTART;TZID=Europe/Helsinki:20270206T150000
 DTEND;TZID=Europe/Helsinki:20270206T163000
 SUMMARY:N4DIV LR: PöU 3 - Karhut 2
 LOCATION:Kisariihi Pöytyä\, Riihikoski
-DESCRIPTION:Salibandy - N4DIV LR\nhttps://tulospalvelu.salibandy.fi/locatio
- n/734827322/fixtures
+DESCRIPTION:Salibandy - N4DIV LR\nhttps://tulospalvelu.salibandy.fi/match/9
+ 52694
 CATEGORIES:Salibandy
-URL:https://tulospalvelu.salibandy.fi/location/734827322/fixtures
+URL:https://tulospalvelu.salibandy.fi/match/952694
 END:VEVENT
 BEGIN:VEVENT
-UID:salibandy-siemen-073@riihikoski-pelit
-DTSTAMP:20260921T031109Z
+UID:salibandy-952697@riihikoski-pelit
+DTSTAMP:20260921T143705Z
 DTSTART;TZID=Europe/Helsinki:20270206T180000
 DTEND;TZID=Europe/Helsinki:20270206T193000
 SUMMARY:N4DIV LR: StrutsiMutsit - PöU 3
 LOCATION:Kisariihi Pöytyä\, Riihikoski
-DESCRIPTION:Salibandy - N4DIV LR\nhttps://tulospalvelu.salibandy.fi/locatio
- n/734827322/fixtures
+DESCRIPTION:Salibandy - N4DIV LR\nhttps://tulospalvelu.salibandy.fi/match/9
+ 52697
 CATEGORIES:Salibandy
-URL:https://tulospalvelu.salibandy.fi/location/734827322/fixtures
+URL:https://tulospalvelu.salibandy.fi/match/952697
 END:VEVENT
 BEGIN:VEVENT
-UID:salibandy-siemen-075@riihikoski-pelit
-DTSTAMP:20260921T031109Z
+UID:salibandy-934011@riihikoski-pelit
+DTSTAMP:20260921T143705Z
 DTSTART;TZID=Europe/Helsinki:20270213T100000
 DTEND;TZID=Europe/Helsinki:20270213T113000
-SUMMARY:Naisten Suomisarja: AFC Campus - PöU
+SUMMARY:Naisten Suomisarja\, lohko A: AFC Campus - PöU
 LOCATION:Kisariihi Pöytyä\, Riihikoski
-DESCRIPTION:Salibandy - Naisten Suomisarja\nhttps://tulospalvelu.salibandy.
- fi/location/734827322/fixtures
+DESCRIPTION:Salibandy - Naisten Suomisarja\, lohko A\nhttps://tulospalvelu.
+ salibandy.fi/match/934011
 CATEGORIES:Salibandy
-URL:https://tulospalvelu.salibandy.fi/location/734827322/fixtures
+URL:https://tulospalvelu.salibandy.fi/match/934011
 END:VEVENT
 BEGIN:VEVENT
-UID:salibandy-siemen-077@riihikoski-pelit
-DTSTAMP:20260921T031109Z
+UID:salibandy-934013@riihikoski-pelit
+DTSTAMP:20260921T143705Z
 DTSTART;TZID=Europe/Helsinki:20270213T143000
 DTEND;TZID=Europe/Helsinki:20270213T160000
-SUMMARY:Naisten Suomisarja: PöU - Nystars
+SUMMARY:Naisten Suomisarja\, lohko A: PöU - Nystars
 LOCATION:Kisariihi Pöytyä\, Riihikoski
-DESCRIPTION:Salibandy - Naisten Suomisarja\nhttps://tulospalvelu.salibandy.
- fi/location/734827322/fixtures
+DESCRIPTION:Salibandy - Naisten Suomisarja\, lohko A\nhttps://tulospalvelu.
+ salibandy.fi/match/934013
 CATEGORIES:Salibandy
-URL:https://tulospalvelu.salibandy.fi/location/734827322/fixtures
+URL:https://tulospalvelu.salibandy.fi/match/934013
 END:VEVENT
 BEGIN:VEVENT
-UID:salibandy-siemen-078@riihikoski-pelit
-DTSTAMP:20260921T031109Z
+UID:salibandy-940039@riihikoski-pelit
+DTSTAMP:20260921T143705Z
 DTSTART;TZID=Europe/Helsinki:20270227T140000
 DTEND;TZID=Europe/Helsinki:20270227T153000
 SUMMARY:M3DIV LR: PöU - TVA
 LOCATION:Kisariihi Pöytyä\, Riihikoski
-DESCRIPTION:Salibandy - M3DIV LR\nhttps://tulospalvelu.salibandy.fi/locatio
- n/734827322/fixtures
+DESCRIPTION:Salibandy - M3DIV LR\nhttps://tulospalvelu.salibandy.fi/match/9
+ 40039
 CATEGORIES:Salibandy
-URL:https://tulospalvelu.salibandy.fi/location/734827322/fixtures
+URL:https://tulospalvelu.salibandy.fi/match/940039
 END:VEVENT
 BEGIN:VEVENT
-UID:salibandy-siemen-081@riihikoski-pelit
-DTSTAMP:20260921T031109Z
+UID:salibandy-940042@riihikoski-pelit
+DTSTAMP:20260921T143705Z
 DTSTART;TZID=Europe/Helsinki:20270227T193000
 DTEND;TZID=Europe/Helsinki:20270227T210000
 SUMMARY:M3DIV LR: OU - PöU
 LOCATION:Kisariihi Pöytyä\, Riihikoski
-DESCRIPTION:Salibandy - M3DIV LR\nhttps://tulospalvelu.salibandy.fi/locatio
- n/734827322/fixtures
+DESCRIPTION:Salibandy - M3DIV LR\nhttps://tulospalvelu.salibandy.fi/match/9
+ 40042
 CATEGORIES:Salibandy
-URL:https://tulospalvelu.salibandy.fi/location/734827322/fixtures
+URL:https://tulospalvelu.salibandy.fi/match/940042
 END:VEVENT
 BEGIN:VEVENT
-UID:salibandy-siemen-082@riihikoski-pelit
-DTSTAMP:20260921T031109Z
+UID:salibandy-940043@riihikoski-pelit
+DTSTAMP:20260921T143705Z
 DTSTART;TZID=Europe/Helsinki:20270306T193000
 DTEND;TZID=Europe/Helsinki:20270306T210000
 SUMMARY:M3DIV LR: PöU - FC KYPS
 LOCATION:Kisariihi Pöytyä\, Riihikoski
-DESCRIPTION:Salibandy - M3DIV LR\nhttps://tulospalvelu.salibandy.fi/locatio
- n/734827322/fixtures
+DESCRIPTION:Salibandy - M3DIV LR\nhttps://tulospalvelu.salibandy.fi/match/9
+ 40043
 CATEGORIES:Salibandy
-URL:https://tulospalvelu.salibandy.fi/location/734827322/fixtures
+URL:https://tulospalvelu.salibandy.fi/match/940043
 END:VEVENT
 BEGIN:VEVENT
-UID:salibandy-siemen-083@riihikoski-pelit
-DTSTAMP:20260921T031109Z
+UID:salibandy-944200@riihikoski-pelit
+DTSTAMP:20260921T143705Z
 DTSTART;TZID=Europe/Helsinki:20270320T100000
 DTEND;TZID=Europe/Helsinki:20270320T113000
 SUMMARY:U16 pojat LR H: PöU Keltainen - SalBa
 LOCATION:Kisariihi Pöytyä\, Riihikoski
-DESCRIPTION:Salibandy - U16 pojat LR H\nhttps://tulospalvelu.salibandy.fi/l
- ocation/734827322/fixtures
+DESCRIPTION:Salibandy - U16 pojat LR H\nhttps://tulospalvelu.salibandy.fi/m
+ atch/944200
 CATEGORIES:Salibandy
-URL:https://tulospalvelu.salibandy.fi/location/734827322/fixtures
+URL:https://tulospalvelu.salibandy.fi/match/944200
 END:VEVENT
 BEGIN:VEVENT
-UID:salibandy-siemen-088@riihikoski-pelit
-DTSTAMP:20260921T031109Z
+UID:salibandy-944205@riihikoski-pelit
+DTSTAMP:20260921T143705Z
 DTSTART;TZID=Europe/Helsinki:20270320T150000
 DTEND;TZID=Europe/Helsinki:20270320T163000
 SUMMARY:U16 pojat LR H: SB Somero - PöU Keltainen
 LOCATION:Kisariihi Pöytyä\, Riihikoski
-DESCRIPTION:Salibandy - U16 pojat LR H\nhttps://tulospalvelu.salibandy.fi/l
- ocation/734827322/fixtures
+DESCRIPTION:Salibandy - U16 pojat LR H\nhttps://tulospalvelu.salibandy.fi/m
+ atch/944205
 CATEGORIES:Salibandy
-URL:https://tulospalvelu.salibandy.fi/location/734827322/fixtures
+URL:https://tulospalvelu.salibandy.fi/match/944205
 END:VEVENT
 END:VCALENDAR

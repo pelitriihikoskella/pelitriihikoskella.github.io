@@ -199,6 +199,44 @@ def tunnista_seurat(ottelu, seurat):
     return loydetyt
 
 
+def siisti_sarja(nimi):
+    """Salibandyn sarjanimet tulevat rajapinnasta kokonaan isoin kirjaimin.
+    Pienennetaan sanat, mutta jatetaan lyhenteet (LR, SS) ja ikaluokat
+    (U14, M3DIV) ennalleen."""
+    if not nimi or nimi != nimi.upper():
+        return nimi
+    sanat = []
+    for sana in nimi.split():
+        # sulkeet ja pilkut eivat kuulu sanan tunnistukseen: "(SYKSY)" on sana
+        ydin = sana.strip("().,:;")
+        etu = sana[:len(sana) - len(sana.lstrip("().,:;"))]
+        loppu = sana[len(sana.rstrip("().,:;")):]
+
+        lyhenne = (len(ydin) <= 3
+                   or any(merkki.isdigit() for merkki in ydin)
+                   or not all(merkki.isalpha() for merkki in ydin)   # LR+SS
+                   or not any(merkki in "aeiouyäö" for merkki in ydin.lower()))
+        if lyhenne:
+            sanat.append(sana)
+        else:
+            sanat.append(etu + (ydin.capitalize() if not sanat else ydin.lower())
+                         + loppu)
+    return " ".join(sanat)
+
+
+def sisaltyy(ryhma, sarja):
+    """Onko ryhman nimi jo sanottu sarjan nimessa? Vertailu on summittainen,
+    koska sama asia kirjoitetaan eri kentissa eri tavoin: "U16-17 TYTÖT LR"
+    ja "U16-17T LR" tarkoittavat samaa."""
+    ryhman_sanat = re.findall(r"\w+", ryhma.lower())
+    sarjan_sanat = re.findall(r"\w+", sarja.lower())
+    if not ryhman_sanat:
+        return True
+    osumat = sum(1 for r in ryhman_sanat
+                 if any(r.startswith(s) or s.startswith(r) for s in sarjan_sanat))
+    return osumat / len(ryhman_sanat) >= 0.6
+
+
 def normalisoi(raaka, lahde, kysely, seurat):
     """Torneopalin ottelu -> sivun oma, kevyt muoto."""
     pvm = teksti(raaka.get("date"))
@@ -206,10 +244,14 @@ def normalisoi(raaka, lahde, kysely, seurat):
     if not pvm or not klo:
         return None
 
-    sarja = teksti(raaka.get("category_name"))
+    sarja = siisti_sarja(teksti(raaka.get("category_name")))
     ryhma = teksti(raaka.get("group_name"))
-    if ryhma and ryhma.lower() not in sarja.lower():
-        sarja = (sarja + " " + ryhma).strip()
+    if ryhma:
+        if ryhma.lower().startswith(sarja.lower()):
+            # ryhma toistaa sarjan nimen ja lisaa siihen lohkon
+            sarja = ryhma
+        elif not sisaltyy(ryhma, sarja):
+            sarja = (sarja + " " + ryhma).strip()
 
     match_id = teksti(raaka.get("match_id"))
     pohja = lahde.get("ottelu_linkki") or ""
