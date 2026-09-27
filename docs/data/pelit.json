@@ -1,91 +1,11 @@
 {
- "paivitetty": "2026-09-26T03:10:32+00:00",
+ "paivitetty": "2026-09-27T03:11:10+00:00",
  "lahteet_haettu": [
   "salibandy",
   "spl"
  ],
  "huomiot": [],
  "ottelut": [
-  {
-   "id": "salibandy-952729",
-   "laji": "Salibandy",
-   "paikka": "Kisariihi",
-   "paikka_tarkenne": "Kisariihi Pöytyä",
-   "pvm": "2026-09-26",
-   "klo": "10:00",
-   "sarja": "U14 tytöt LR valkoinen",
-   "koti": "PöU",
-   "vieras": "Karhut White",
-   "koti_id": "salibandy-33068",
-   "vieras_id": "salibandy-34216",
-   "koti_seura": "PÖYTYÄN URHEILIJAT",
-   "vieras_seura": "FBT KARHUT UNITED",
-   "linkki": "https://tulospalvelu.salibandy.fi/match/952729",
-   "lahde": "salibandy",
-   "seurat": [
-    "pou"
-   ],
-   "kesto": 90
-  },
-  {
-   "id": "salibandy-952730",
-   "laji": "Salibandy",
-   "paikka": "Kisariihi",
-   "paikka_tarkenne": "Kisariihi Pöytyä",
-   "pvm": "2026-09-26",
-   "klo": "11:00",
-   "sarja": "U14 tytöt LR valkoinen",
-   "koti": "SB SOMERO",
-   "vieras": "LaJy",
-   "koti_id": "salibandy-34190",
-   "vieras_id": "salibandy-27994",
-   "koti_seura": "SB SOMERO",
-   "vieras_seura": "LAITILAN JYSKE",
-   "linkki": "https://tulospalvelu.salibandy.fi/match/952730",
-   "lahde": "salibandy",
-   "seurat": [],
-   "kesto": 90
-  },
-  {
-   "id": "salibandy-952731",
-   "laji": "Salibandy",
-   "paikka": "Kisariihi",
-   "paikka_tarkenne": "Kisariihi Pöytyä",
-   "pvm": "2026-09-26",
-   "klo": "13:00",
-   "sarja": "U14 tytöt LR valkoinen",
-   "koti": "Karhut White",
-   "vieras": "SB SOMERO",
-   "koti_id": "salibandy-34216",
-   "vieras_id": "salibandy-34190",
-   "koti_seura": "FBT KARHUT UNITED",
-   "vieras_seura": "SB SOMERO",
-   "linkki": "https://tulospalvelu.salibandy.fi/match/952731",
-   "lahde": "salibandy",
-   "seurat": [],
-   "kesto": 90
-  },
-  {
-   "id": "salibandy-952732",
-   "laji": "Salibandy",
-   "paikka": "Kisariihi",
-   "paikka_tarkenne": "Kisariihi Pöytyä",
-   "pvm": "2026-09-26",
-   "klo": "14:00",
-   "sarja": "U14 tytöt LR valkoinen",
-   "koti": "LaJy",
-   "vieras": "PöU",
-   "koti_id": "salibandy-27994",
-   "vieras_id": "salibandy-33068",
-   "koti_seura": "LAITILAN JYSKE",
-   "vieras_seura": "PÖYTYÄN URHEILIJAT",
-   "linkki": "https://tulospalvelu.salibandy.fi/match/952732",
-   "lahde": "salibandy",
-   "seurat": [
-    "pou"
-   ],
-   "kesto": 90
-  },
   {
    "id": "salibandy-947395",
    "laji": "Salibandy",
