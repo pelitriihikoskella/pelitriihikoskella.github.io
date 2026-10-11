@@ -1,91 +1,11 @@
 {
- "paivitetty": "2026-10-10T03:11:41+00:00",
+ "paivitetty": "2026-10-11T03:12:17+00:00",
  "lahteet_haettu": [
   "salibandy",
   "spl"
  ],
  "huomiot": [],
  "ottelut": [
-  {
-   "id": "salibandy-933963",
-   "laji": "Salibandy",
-   "paikka": "Kisariihi",
-   "paikka_tarkenne": "Kisariihi Pöytyä",
-   "pvm": "2026-10-10",
-   "klo": "10:00",
-   "sarja": "Naisten Suomisarja, lohko A",
-   "koti": "Nystars",
-   "vieras": "PöU",
-   "koti_id": "salibandy-2521",
-   "vieras_id": "salibandy-2863",
-   "koti_seura": "NYSTARS UUSIKAUPUNKI",
-   "vieras_seura": "PÖYTYÄN URHEILIJAT",
-   "linkki": "https://tulospalvelu.salibandy.fi/match/933963",
-   "lahde": "salibandy",
-   "seurat": [
-    "pou"
-   ],
-   "kesto": 90
-  },
-  {
-   "id": "salibandy-933964",
-   "laji": "Salibandy",
-   "paikka": "Kisariihi",
-   "paikka_tarkenne": "Kisariihi Pöytyä",
-   "pvm": "2026-10-10",
-   "klo": "11:20",
-   "sarja": "Naisten Suomisarja, lohko A",
-   "koti": "AFC Campus",
-   "vieras": "SBSV",
-   "koti_id": "salibandy-2823",
-   "vieras_id": "salibandy-6324",
-   "koti_seura": "ACADEMIC FLOORBALL CLUB CAMPUS",
-   "vieras_seura": "SALIBANDYSEURA VANTAGE",
-   "linkki": "https://tulospalvelu.salibandy.fi/match/933964",
-   "lahde": "salibandy",
-   "seurat": [],
-   "kesto": 90
-  },
-  {
-   "id": "salibandy-933965",
-   "laji": "Salibandy",
-   "paikka": "Kisariihi",
-   "paikka_tarkenne": "Kisariihi Pöytyä",
-   "pvm": "2026-10-10",
-   "klo": "13:40",
-   "sarja": "Naisten Suomisarja, lohko A",
-   "koti": "SBSV",
-   "vieras": "Nystars",
-   "koti_id": "salibandy-6324",
-   "vieras_id": "salibandy-2521",
-   "koti_seura": "SALIBANDYSEURA VANTAGE",
-   "vieras_seura": "NYSTARS UUSIKAUPUNKI",
-   "linkki": "https://tulospalvelu.salibandy.fi/match/933965",
-   "lahde": "salibandy",
-   "seurat": [],
-   "kesto": 90
-  },
-  {
-   "id": "salibandy-933966",
-   "laji": "Salibandy",
-   "paikka": "Kisariihi",
-   "paikka_tarkenne": "Kisariihi Pöytyä",
-   "pvm": "2026-10-10",
-   "klo": "15:00",
-   "sarja": "Naisten Suomisarja, lohko A",
-   "koti": "PöU",
-   "vieras": "AFC Campus",
-   "koti_id": "salibandy-2863",
-   "vieras_id": "salibandy-2823",
-   "koti_seura": "PÖYTYÄN URHEILIJAT",
-   "vieras_seura": "ACADEMIC FLOORBALL CLUB CAMPUS",
-   "linkki": "https://tulospalvelu.salibandy.fi/match/933966",
-   "lahde": "salibandy",
-   "seurat": [
-    "pou"
-   ],
-   "kesto": 90
-  },
   {
    "id": "salibandy-958265",
    "laji": "Salibandy",
