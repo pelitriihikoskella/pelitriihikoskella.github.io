@@ -1,5 +1,5 @@
 {
- "paivitetty": "2026-10-12T03:13:44+00:00",
+ "paivitetty": "2026-10-13T03:13:10+00:00",
  "lahteet_haettu": [
   "salibandy",
   "spl"
@@ -398,6 +398,67 @@
    "linkki": "https://tulospalvelu.palloliitto.fi/match/4355036",
    "lahde": "spl",
    "seurat": [],
+   "kesto": 90
+  },
+  {
+   "id": "spl-4388267",
+   "laji": "Futsal",
+   "paikka": "Kisariihi",
+   "paikka_tarkenne": "Kisariihi",
+   "pvm": "2026-11-14",
+   "klo": "09:45",
+   "sarja": "P17 Futsal-Kakkonen (2010) A",
+   "koti": "APU/PöKa YJ",
+   "vieras": "FC HaPo",
+   "koti_id": "spl-35150634",
+   "vieras_id": "spl-35201909",
+   "koti_seura": "Auran Palokunnan Urheilijat",
+   "vieras_seura": "Harjavallan Pallo",
+   "linkki": "https://tulospalvelu.palloliitto.fi/match/4388267",
+   "lahde": "spl",
+   "seurat": [
+    "poka"
+   ],
+   "kesto": 90
+  },
+  {
+   "id": "spl-4388268",
+   "laji": "Futsal",
+   "paikka": "Kisariihi",
+   "paikka_tarkenne": "Kisariihi",
+   "pvm": "2026-11-14",
+   "klo": "11:00",
+   "sarja": "P17 Futsal-Kakkonen (2010) A",
+   "koti": "FC HaPo",
+   "vieras": "LTU 2",
+   "koti_id": "spl-35201909",
+   "vieras_id": "spl-179154",
+   "koti_seura": "Harjavallan Pallo",
+   "vieras_seura": "Littoisten Työväen Urheilijat",
+   "linkki": "https://tulospalvelu.palloliitto.fi/match/4388268",
+   "lahde": "spl",
+   "seurat": [],
+   "kesto": 90
+  },
+  {
+   "id": "spl-4388269",
+   "laji": "Futsal",
+   "paikka": "Kisariihi",
+   "paikka_tarkenne": "Kisariihi",
+   "pvm": "2026-11-14",
+   "klo": "12:15",
+   "sarja": "P17 Futsal-Kakkonen (2010) A",
+   "koti": "LTU 2",
+   "vieras": "APU/PöKa YJ",
+   "koti_id": "spl-179154",
+   "vieras_id": "spl-35150634",
+   "koti_seura": "Littoisten Työväen Urheilijat",
+   "vieras_seura": "Auran Palokunnan Urheilijat",
+   "linkki": "https://tulospalvelu.palloliitto.fi/match/4388269",
+   "lahde": "spl",
+   "seurat": [
+    "poka"
+   ],
    "kesto": 90
   },
   {
