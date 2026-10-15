@@ -4,7 +4,10 @@ name: Viikko-ohjelma ja pelipäivän muistutus
 # Riihikoskella todella pelataan sinä päivänä.
 on:
   schedule:
-    - cron: "0 4 * * *"       # 07.00 Suomen kesäaikaa, 06.00 talvella
+    # GitHubin ajastus on UTC-aikaa eikä tunne kesäaikaa. Työ käynnistetään
+    # kahdesti, ja kooste.py --vain-tunti päästää läpi sen kerran, jolloin
+    # Suomessa on kuusi: kesällä 03 UTC, talvella 04 UTC.
+    - cron: "0 3,4 * * *"
   workflow_dispatch:
     inputs:
       tila:
@@ -57,8 +60,14 @@ jobs:
       - name: Kokoa teksti
         id: kooste
         run: |
+          # Ajastetussa ajossa julkaistaan vain klo 6 Suomen aikaa; käsin
+          # käynnistetty ajo menee läpi kellonajasta riippumatta.
+          kello=""
+          if [ "${{ github.event_name }}" = "schedule" ]; then
+            kello="--vain-tunti 6"
+          fi
           if python scripts/kooste.py --tila "${{ steps.tila.outputs.valinta }}" \
-               --tiedosto kooste.txt; then
+               $kello --tiedosto kooste.txt; then
             echo "peleja=kylla" >> "$GITHUB_OUTPUT"
           else
             echo "peleja=ei" >> "$GITHUB_OUTPUT"

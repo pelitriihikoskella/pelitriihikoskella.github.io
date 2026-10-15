@@ -15,7 +15,7 @@ ohittaa julkaisun sen sijaan, etta lahettaisi "ei peleja" -viestin.
 import argparse
 import os
 import sys
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
@@ -32,6 +32,23 @@ VIIKONPAIVAT = ["Ma", "Ti", "Ke", "To", "Pe", "La", "Su"]
 VIIKONPAIVAT_ESSIIVI = ["maanantaina", "tiistaina", "keskiviikkona", "torstaina",
                         "perjantaina", "lauantaina", "sunnuntaina"]
 MERKIT = {"Jalkapallo": "⚽", "Futsal": "⚽", "Salibandy": "\U0001f3d1"}
+
+
+def suomen_aika(utc=None):
+    """Suomen paikallinen aika ilman aikavyohyketietokantaa.
+
+    GitHubin ajastus toimii vain UTC-ajassa eika tunne kesaaikaa, joten
+    kellonaika on tarkistettava itse. EU:n saanto: kesaaika maaliskuun
+    viimeisesta sunnuntaista lokakuun viimeiseen, vaihto klo 01 UTC."""
+    utc = utc or datetime.now(timezone.utc)
+
+    def viimeinen_sunnuntai(vuosi, kuukausi):
+        viimeinen = datetime(vuosi, kuukausi, 31, 1, tzinfo=timezone.utc)
+        return viimeinen - timedelta(days=(viimeinen.weekday() + 1) % 7)
+
+    kesaaika = (viimeinen_sunnuntai(utc.year, 3) <= utc
+                < viimeinen_sunnuntai(utc.year, 10))
+    return utc + timedelta(hours=3 if kesaaika else 2)
 
 
 def jakso(tila, paivat, tanaan):
@@ -104,7 +121,18 @@ def main():
     jasennin.add_argument("--tiedosto", help="kirjoita teksti myös tiedostoon")
     jasennin.add_argument("--salli-alustavat", action="store_true",
                           help="ota mukaan myös käsin poimittu siemendata")
+    jasennin.add_argument("--vain-tunti", type=int, metavar="TUNTI",
+                          help="aja vain jos Suomessa on tämä tunti, muuten lopeta")
     argumentit = jasennin.parse_args()
+
+    # GitHubin ajastus on UTC-aikaa eikä tunne kesäaikaa, joten työ ajetaan
+    # kahdesti ja väärä kerta karsitaan tässä.
+    if argumentit.vain_tunti is not None:
+        nyt = suomen_aika()
+        if nyt.hour != argumentit.vain_tunti:
+            print("Suomen aika on %s, ei %02d - tämä ajo ohitetaan."
+                  % (nyt.strftime("%H:%M"), argumentit.vain_tunti), file=sys.stderr)
+            return 1
 
     config = paivita.lue_config()
     data = paivita.lue_data()

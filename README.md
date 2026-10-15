@@ -203,11 +203,21 @@ docs/                        julkaistava sivu (GitHub Pagesin juuri)
 
 ## Facebook-julkaisu
 
-Työ `.github/workflows/kooste.yml` ajetaan joka aamu klo 7 (talvella 6):
+Työ `.github/workflows/kooste.yml` ajetaan joka aamu **klo 6 Suomen aikaa**:
 
 - **maanantaisin** koko viikon ohjelma
 - **muina päivinä** muistutus vain, jos Riihikoskella pelataan sinä päivänä
 - jos pelejä ei ole, mitään ei julkaista — ryhmään ei mene tyhjiä viestejä
+
+GitHubin ajastus toimii vain UTC-ajassa eikä tunne kesäaikaa, joten kiinteä
+kellonaika siirtyisi tunnilla vuodenajan mukaan. Siksi työ käynnistetään
+kahdesti (03 ja 04 UTC) ja `kooste.py --vain-tunti 6` päästää läpi sen kerran,
+jolloin Suomessa on kuusi. Kesäaika lasketaan EU:n säännöstä koodissa, joten
+se ei ole kiinni palvelimen aikavyöhyketiedoista.
+
+Ajastetut työt voivat GitHubilla viivästyä ruuhka-aikoina. Käytännössä ilmoitus
+tulee klo 6.00–6.30. Jos ajo viivästyy yli tunnin, se ohittuu kokonaan sinä
+päivänä — silloin koosteen saa käsin Actions-välilehdeltä.
 
 Kooste menee kahteen paikkaan: **GitHub luo siitä ilmoituksen**, josta saat
 sähköpostin automaattisesti (ei vaadi mitään tunnuksia), ja **Facebook-sivulle**,
