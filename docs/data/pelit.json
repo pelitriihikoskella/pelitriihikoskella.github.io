@@ -1,5 +1,5 @@
 {
- "paivitetty": "2026-10-14T03:23:34+00:00",
+ "paivitetty": "2026-10-15T03:22:39+00:00",
  "lahteet_haettu": [
   "salibandy",
   "spl"
@@ -401,6 +401,67 @@
    "kesto": 90
   },
   {
+   "id": "spl-4387531",
+   "laji": "Futsal",
+   "paikka": "Kisariihi",
+   "paikka_tarkenne": "Kisariihi",
+   "pvm": "2026-11-07",
+   "klo": "14:00",
+   "sarja": "Miesten Futsal-Nelonen A1",
+   "koti": "Pöka",
+   "vieras": "RaiFu 2",
+   "koti_id": "spl-35228341",
+   "vieras_id": "spl-104967",
+   "koti_seura": "Pöytyän Kaima",
+   "vieras_seura": "Raisio Futis",
+   "linkki": "https://tulospalvelu.palloliitto.fi/match/4387531",
+   "lahde": "spl",
+   "seurat": [
+    "poka"
+   ],
+   "kesto": 90
+  },
+  {
+   "id": "spl-4387532",
+   "laji": "Futsal",
+   "paikka": "Kisariihi",
+   "paikka_tarkenne": "Kisariihi",
+   "pvm": "2026-11-07",
+   "klo": "15:15",
+   "sarja": "Miesten Futsal-Nelonen A1",
+   "koti": "RaiFu 2",
+   "vieras": "KuuLa",
+   "koti_id": "spl-104967",
+   "vieras_id": "spl-167326",
+   "koti_seura": "Raisio Futis",
+   "vieras_seura": "Kuuvuoren Laaki",
+   "linkki": "https://tulospalvelu.palloliitto.fi/match/4387532",
+   "lahde": "spl",
+   "seurat": [],
+   "kesto": 90
+  },
+  {
+   "id": "spl-4387533",
+   "laji": "Futsal",
+   "paikka": "Kisariihi",
+   "paikka_tarkenne": "Kisariihi",
+   "pvm": "2026-11-07",
+   "klo": "16:30",
+   "sarja": "Miesten Futsal-Nelonen A1",
+   "koti": "KuuLa",
+   "vieras": "Pöka",
+   "koti_id": "spl-167326",
+   "vieras_id": "spl-35228341",
+   "koti_seura": "Kuuvuoren Laaki",
+   "vieras_seura": "Pöytyän Kaima",
+   "linkki": "https://tulospalvelu.palloliitto.fi/match/4387533",
+   "lahde": "spl",
+   "seurat": [
+    "poka"
+   ],
+   "kesto": 90
+  },
+  {
    "id": "spl-4388267",
    "laji": "Futsal",
    "paikka": "Kisariihi",
@@ -499,6 +560,67 @@
    "linkki": "https://tulospalvelu.palloliitto.fi/match/4355044",
    "lahde": "spl",
    "seurat": [],
+   "kesto": 90
+  },
+  {
+   "id": "spl-4387543",
+   "laji": "Futsal",
+   "paikka": "Kisariihi",
+   "paikka_tarkenne": "Kisariihi",
+   "pvm": "2026-11-21",
+   "klo": "14:00",
+   "sarja": "Miesten Futsal-Nelonen A1",
+   "koti": "Pöka",
+   "vieras": "Ponteva/Futsal",
+   "koti_id": "spl-35228341",
+   "vieras_id": "spl-35176191",
+   "koti_seura": "Pöytyän Kaima",
+   "vieras_seura": "Turun Ponteva",
+   "linkki": "https://tulospalvelu.palloliitto.fi/match/4387543",
+   "lahde": "spl",
+   "seurat": [
+    "poka"
+   ],
+   "kesto": 90
+  },
+  {
+   "id": "spl-4387544",
+   "laji": "Futsal",
+   "paikka": "Kisariihi",
+   "paikka_tarkenne": "Kisariihi",
+   "pvm": "2026-11-21",
+   "klo": "15:15",
+   "sarja": "Miesten Futsal-Nelonen A1",
+   "koti": "Ponteva/Futsal",
+   "vieras": "Jyske",
+   "koti_id": "spl-35176191",
+   "vieras_id": "spl-35151040",
+   "koti_seura": "Turun Ponteva",
+   "vieras_seura": "Laitilan Jyske",
+   "linkki": "https://tulospalvelu.palloliitto.fi/match/4387544",
+   "lahde": "spl",
+   "seurat": [],
+   "kesto": 90
+  },
+  {
+   "id": "spl-4387545",
+   "laji": "Futsal",
+   "paikka": "Kisariihi",
+   "paikka_tarkenne": "Kisariihi",
+   "pvm": "2026-11-21",
+   "klo": "16:30",
+   "sarja": "Miesten Futsal-Nelonen A1",
+   "koti": "Jyske",
+   "vieras": "Pöka",
+   "koti_id": "spl-35151040",
+   "vieras_id": "spl-35228341",
+   "koti_seura": "Laitilan Jyske",
+   "vieras_seura": "Pöytyän Kaima",
+   "linkki": "https://tulospalvelu.palloliitto.fi/match/4387545",
+   "lahde": "spl",
+   "seurat": [
+    "poka"
+   ],
    "kesto": 90
   },
   {
