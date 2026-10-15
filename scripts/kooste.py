@@ -27,6 +27,10 @@ for virta in (sys.stdout, sys.stderr):
         virta.reconfigure(encoding="utf-8", errors="replace")
 
 VIIKONPAIVAT = ["Ma", "Ti", "Ke", "To", "Pe", "La", "Su"]
+# Essiivimuoto otsikkoon: "Tänään lauantaina Riihikoskella". Postaus jaetaan
+# usein eteenpäin, jolloin pelkkä "tänään" ei enää kerro mistä päivästä on kyse.
+VIIKONPAIVAT_ESSIIVI = ["maanantaina", "tiistaina", "keskiviikkona", "torstaina",
+                        "perjantaina", "lauantaina", "sunnuntaina"]
 MERKIT = {"Jalkapallo": "⚽", "Futsal": "⚽", "Salibandy": "\U0001f3d1"}
 
 
@@ -35,7 +39,8 @@ def jakso(tila, paivat, tanaan):
     if tila == "viikko":
         return tanaan, tanaan + timedelta(days=6), "Tämän viikon pelit Riihikoskella"
     if tila == "tanaan":
-        return tanaan, tanaan, "Tänään Riihikoskella"
+        return (tanaan, tanaan,
+                "Tänään %s Riihikoskella" % VIIKONPAIVAT_ESSIIVI[tanaan.weekday()])
     return (tanaan, tanaan + timedelta(days=paivat - 1),
             "Pelit Riihikoskella – seuraavat %d päivää" % paivat)
 
