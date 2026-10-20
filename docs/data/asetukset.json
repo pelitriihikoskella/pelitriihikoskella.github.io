@@ -86,6 +86,15 @@
    "joukkue": true
   },
   {
+   "tiedosto": "joukkue-spl-35229180.ics",
+   "nimi": "Pöka – P10 Futsal (2017) A",
+   "suodatin": {
+    "joukkue": "spl-35229180"
+   },
+   "seura": "poka",
+   "joukkue": true
+  },
+  {
    "tiedosto": "joukkue-salibandy-31725.ics",
    "nimi": "PöU 2 – N3DIV LR",
    "suodatin": {
@@ -144,15 +153,6 @@
    "nimi": "PöU – Naisten Suomisarja, lohko A",
    "suodatin": {
     "joukkue": "salibandy-2863"
-   },
-   "seura": "pou",
-   "joukkue": true
-  },
-  {
-   "tiedosto": "joukkue-salibandy-27811.ics",
-   "nimi": "PöU – U12 tytöt LR (syksy)",
-   "suodatin": {
-    "joukkue": "salibandy-27811"
    },
    "seura": "pou",
    "joukkue": true
