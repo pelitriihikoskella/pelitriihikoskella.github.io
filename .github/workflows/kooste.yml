@@ -4,12 +4,16 @@ name: Viikko-ohjelma ja pelipäivän muistutus
 # Riihikoskella todella pelataan sinä päivänä.
 on:
   schedule:
-    # GitHubin ajastetut työt viivästyvät säännöllisesti, toisinaan yli neljä
-    # tuntia. Yritys alkaa siksi jo klo 02 UTC: silloin nelituntinenkin viive
-    # osuu vielä aamun julkaisuikkunaan. kooste.py päästää läpi vain klo 6-12
-    # Suomen aikaa, ja jo tehty ilmoitus tunnistetaan saman päivän
-    # GitHub-ilmoituksesta, joten julkaisuja tulee silti yksi.
-    - cron: "0 2-8 * * *"
+    # Julkaisu heti vuorokauden vaihduttua, jotta postaus on valmiina ennen
+    # heräämistä. GitHubin ajastetut työt viivästyvät säännöllisesti, toisinaan
+    # yli neljä tuntia, joten yrityksiä on tunnin välein läpi yön ja aamun.
+    # kooste.py päästää läpi vain klo 00-12 Suomen aikaa, ja jo tehty ilmoitus
+    # tunnistetaan saman päivän GitHub-ilmoituksesta - julkaisuja tulee yksi.
+    #
+    # 21-23 UTC osuu Suomen puolenyön molemmin puolin sekä kesä- että
+    # talviaikaan; loput ovat varayrityksiä aamun ajan.
+    - cron: "1 21-23 * * *"
+    - cron: "1 0-8 * * *"
   workflow_dispatch:
     inputs:
       tila:
@@ -89,7 +93,7 @@ jobs:
           # käynnistetty ajo menee läpi kellonajasta riippumatta.
           ikkuna=""
           if [ "${{ github.event_name }}" = "schedule" ]; then
-            ikkuna="--aikaisintaan 6 --viimeistaan 12"
+            ikkuna="--viimeistaan 12"
           fi
           if python scripts/kooste.py --tila "${{ steps.tila.outputs.valinta }}" \
                $ikkuna --tiedosto kooste.txt; then
