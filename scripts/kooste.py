@@ -121,17 +121,28 @@ def main():
     jasennin.add_argument("--tiedosto", help="kirjoita teksti myös tiedostoon")
     jasennin.add_argument("--salli-alustavat", action="store_true",
                           help="ota mukaan myös käsin poimittu siemendata")
-    jasennin.add_argument("--vain-tunti", type=int, metavar="TUNTI",
-                          help="aja vain jos Suomessa on tämä tunti, muuten lopeta")
+    jasennin.add_argument("--aikaisintaan", type=int, metavar="TUNTI",
+                          help="älä julkaise ennen tätä tuntia Suomen aikaa")
+    jasennin.add_argument("--viimeistaan", type=int, metavar="TUNTI",
+                          help="älä julkaise enää tämän tunnin jälkeen")
+    jasennin.add_argument("--suomen-paiva", action="store_true",
+                          help="tulosta Suomen päiväys ja lopeta")
     argumentit = jasennin.parse_args()
 
-    # GitHubin ajastus on UTC-aikaa eikä tunne kesäaikaa, joten työ ajetaan
-    # kahdesti ja väärä kerta karsitaan tässä.
-    if argumentit.vain_tunti is not None:
+    if argumentit.suomen_paiva:
+        print(suomen_aika().strftime("%d.%m.%Y"))
+        return 0
+
+    # GitHubin ajastus on UTC-aikaa, se ei tunne kesäaikaa, ja ajot voivat
+    # viivästyä tunteja. Siksi julkaisu sallitaan ikkunan sisällä eikä yhtenä
+    # tasatuntina - myöhästynyt ilmoitus on parempi kuin julkaisematon.
+    if argumentit.aikaisintaan is not None or argumentit.viimeistaan is not None:
         nyt = suomen_aika()
-        if nyt.hour != argumentit.vain_tunti:
-            print("Suomen aika on %s, ei %02d - tämä ajo ohitetaan."
-                  % (nyt.strftime("%H:%M"), argumentit.vain_tunti), file=sys.stderr)
+        alku = argumentit.aikaisintaan if argumentit.aikaisintaan is not None else 0
+        loppu = argumentit.viimeistaan if argumentit.viimeistaan is not None else 23
+        if not alku <= nyt.hour <= loppu:
+            print("Suomen aika on %s, julkaisuikkuna %02d-%02d - ohitetaan."
+                  % (nyt.strftime("%H:%M"), alku, loppu), file=sys.stderr)
             return 1
 
     config = paivita.lue_config()

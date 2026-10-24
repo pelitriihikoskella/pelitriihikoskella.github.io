@@ -4,10 +4,11 @@ name: Viikko-ohjelma ja pelipäivän muistutus
 # Riihikoskella todella pelataan sinä päivänä.
 on:
   schedule:
-    # GitHubin ajastus on UTC-aikaa eikä tunne kesäaikaa. Työ käynnistetään
-    # kahdesti, ja kooste.py --vain-tunti päästää läpi sen kerran, jolloin
-    # Suomessa on kuusi: kesällä 03 UTC, talvella 04 UTC.
-    - cron: "0 3,4 * * *"
+    # GitHubin ajastetut työt viivästyvät säännöllisesti, toisinaan tunteja.
+    # Siksi työ yritetään kerran tunnissa aamuyöstä aamupäivään; kooste.py
+    # päästää läpi vain klo 6-12 Suomen aikaa, ja jo tehty ilmoitus
+    # tunnistetaan GitHub-ilmoituksesta, joten julkaisuja tulee silti yksi.
+    - cron: "0 3-8 * * *"
   workflow_dispatch:
     inputs:
       tila:
@@ -34,18 +35,40 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Valitse tila
+      - name: Suomen päivä ja tila
         id: tila
         run: |
+          paiva=$(python scripts/kooste.py --suomen-paiva)
+          viikonpaiva=$(python -c "import sys; sys.path.insert(0,'scripts'); \
+            from kooste import suomen_aika; print(suomen_aika().weekday())")
           if [ -n "${{ github.event.inputs.tila }}" ]; then
             valinta="${{ github.event.inputs.tila }}"
-          elif [ "$(date -u +%u)" = "1" ]; then
+          elif [ "$viikonpaiva" = "0" ]; then
             valinta="viikko"
           else
             valinta="tanaan"
           fi
+          echo "paiva=$paiva" >> "$GITHUB_OUTPUT"
           echo "valinta=$valinta" >> "$GITHUB_OUTPUT"
-          echo "Tila: $valinta"
+          echo "Suomessa on $paiva, tila: $valinta"
+
+      # Tunnin välein yrittäminen toimii vain, jos jo tehty ilmoitus
+      # tunnistetaan. Merkkinä on saman päivän GitHub-ilmoitus, joka syntyy
+      # julkaisun yhteydessä - erillistä tilatiedostoa ei tarvita.
+      - name: Onko ilmoitus jo tehty tänään?
+        id: tehty
+        if: github.event_name == 'schedule'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          otsikko="Pelit Riihikoskella – ${{ steps.tila.outputs.paiva }}"
+          if gh issue list --state all --limit 30 --json title --jq '.[].title' \
+               | grep -Fxq "$otsikko"; then
+            echo "jo=kylla" >> "$GITHUB_OUTPUT"
+            echo "Ilmoitus on jo tehty tänään - tämä ajo ohitetaan."
+          else
+            echo "jo=ei" >> "$GITHUB_OUTPUT"
+          fi
 
       # Käsin käynnistetyssä ajossa todennetaan yhteys, vaikka julkaistavaa ei
       # olisi. Muuten rikkinäinen tunnus paljastuisi vasta ensimmäisenä
@@ -59,20 +82,36 @@ jobs:
 
       - name: Kokoa teksti
         id: kooste
+        if: steps.tehty.outputs.jo != 'kylla'
         run: |
-          # Ajastetussa ajossa julkaistaan vain klo 6 Suomen aikaa; käsin
+          # Ajastetussa ajossa julkaistaan vain aamun ikkunassa; käsin
           # käynnistetty ajo menee läpi kellonajasta riippumatta.
-          kello=""
+          ikkuna=""
           if [ "${{ github.event_name }}" = "schedule" ]; then
-            kello="--vain-tunti 6"
+            ikkuna="--aikaisintaan 6 --viimeistaan 12"
           fi
           if python scripts/kooste.py --tila "${{ steps.tila.outputs.valinta }}" \
-               $kello --tiedosto kooste.txt; then
+               $ikkuna --tiedosto kooste.txt; then
             echo "peleja=kylla" >> "$GITHUB_OUTPUT"
           else
             echo "peleja=ei" >> "$GITHUB_OUTPUT"
             echo "Ei julkaistavaa - työ päättyy tähän."
           fi
+
+      # Ilmoitus luodaan ennen Facebook-julkaisua, koska se toimii myös
+      # merkkinä siitä että tämä päivä on hoidettu. Jos julkaisu epäonnistuu,
+      # ajo menee punaiseksi ja teksti on ilmoituksessa valmiina - se on
+      # parempi kuin sama postaus kahdesti.
+      - name: Muistutus sähköpostiin
+        if: steps.kooste.outputs.peleja == 'kylla' && github.event_name == 'schedule'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          osoite=$(gh issue create \
+            --title "Pelit Riihikoskella – ${{ steps.tila.outputs.paiva }}" \
+            --body-file kooste.txt)
+          echo "Muistutus luotu: $osoite"
+          gh issue close "$osoite" --comment "Kooste lähetetty sähköpostiin."
 
       - name: Julkaise Facebook-sivulle
         if: steps.kooste.outputs.peleja == 'kylla'
@@ -87,14 +126,3 @@ jobs:
           else
             python scripts/facebook.py --tiedosto kooste.txt
           fi
-
-      - name: Muistutus sähköpostiin
-        if: steps.kooste.outputs.peleja == 'kylla'
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          osoite=$(gh issue create \
-            --title "Pelit Riihikoskella – $(date -u +%d.%m.%Y)" \
-            --body-file kooste.txt)
-          echo "Muistutus luotu: $osoite"
-          gh issue close "$osoite" --comment "Kooste lähetetty sähköpostiin."
