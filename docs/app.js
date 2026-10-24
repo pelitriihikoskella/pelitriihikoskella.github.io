@@ -54,14 +54,25 @@
     return osuma ? osuma.nimi : arvo;
   }
 
+  /* Lyhenne saa olla missä kohtaa nimeä tahansa, kunhan se on oma sanansa:
+     yhteisjoukkue on "APU/PöKa YJ" eikä ala seuran lyhenteellä. Numero saa
+     olla kiinni lyhenteessä ("Pöka2011/12"), kirjain ei - muuten lyhenne osuisi
+     keskelle jotain pidempää sanaa. Sama sääntö kuin paivita.py:n puolella. */
+  function sisaltaaLyhenteen(nimi, lyhenne) {
+    var osat = (nimi || "").toLowerCase().split(/[^0-9a-zåäö]+/);
+    var haku = lyhenne.toLowerCase();
+    return osat.some(function (osa) {
+      return osa === haku
+        || (osa.indexOf(haku) === 0 && /^[0-9]/.test(osa.slice(haku.length)));
+    });
+  }
+
   function onOmaJoukkue(nimi, ottelu) {
     // Korostetaan se joukkue, jonka perusteella ottelu tunnistettiin omaksi.
     if (!ottelu.seurat || !ottelu.seurat.length) { return false; }
-    var lyhenteet = tila.seurat.filter(function (s) {
+    return tila.seurat.filter(function (s) {
       return ottelu.seurat.indexOf(s.id) !== -1;
-    }).map(function (s) { return s.lyhenne.toLowerCase(); });
-    var pieni = (nimi || "").toLowerCase();
-    return lyhenteet.some(function (l) { return pieni.indexOf(l) === 0; });
+    }).some(function (s) { return sisaltaaLyhenteen(nimi, s.lyhenne); });
   }
 
   // ------------------------------------------------------------- suodatus
