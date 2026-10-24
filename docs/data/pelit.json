@@ -1,5 +1,5 @@
 {
- "paivitetty": "2026-10-23T05:35:49+00:00",
+ "paivitetty": "2026-10-24T05:15:16+00:00",
  "lahteet_haettu": [
   "salibandy",
   "spl"
@@ -815,6 +815,27 @@
    "koti_seura": "IFK INNEBANDY, HELSINGFORS",
    "vieras_seura": "PÖYTYÄN URHEILIJAT",
    "linkki": "https://tulospalvelu.salibandy.fi/match/933990",
+   "lahde": "salibandy",
+   "seurat": [
+    "pou"
+   ],
+   "kesto": 90
+  },
+  {
+   "id": "salibandy-946312",
+   "laji": "Salibandy",
+   "paikka": "Kisariihi",
+   "paikka_tarkenne": "Kisariihi Pöytyä",
+   "pvm": "2027-01-06",
+   "klo": "12:00",
+   "sarja": "U16 pojat kilpa LR+SS",
+   "koti": "PöU Musta",
+   "vieras": "TPS",
+   "koti_id": "salibandy-25274",
+   "vieras_id": "salibandy-30888",
+   "koti_seura": "PÖYTYÄN URHEILIJAT",
+   "vieras_seura": "TPS SALIBANDY",
+   "linkki": "https://tulospalvelu.salibandy.fi/match/946312",
    "lahde": "salibandy",
    "seurat": [
     "pou"
