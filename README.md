@@ -213,8 +213,9 @@ Työ `.github/workflows/kooste.yml` ajetaan joka aamu **klo 6 Suomen aikaa**:
 viivästyvät säännöllisesti — tässä projektissa on nähty jopa yli neljän tunnin
 viiveitä. Lisäksi ajastus toimii vain UTC-ajassa eikä tunne kesäaikaa.
 
-Siksi työ yritetään **kerran tunnissa klo 3–8 UTC**, ja kaksi asiaa rajaa
-julkaisut yhteen päivässä:
+Siksi työ yritetään **kerran tunnissa klo 2–8 UTC**. Ensimmäinen yritys on
+tahallaan ennen julkaisuikkunaa: silloin nelituntinenkin viive osuu vielä
+aamuun. Kaksi asiaa rajaa julkaisut yhteen päivässä:
 
 1. `kooste.py --aikaisintaan 6 --viimeistaan 12` päästää läpi vain aamun
    ikkunassa Suomen aikaa. Kesäaika lasketaan EU:n säännöstä koodissa, joten
@@ -226,6 +227,11 @@ julkaisut yhteen päivässä:
 Käytännössä ilmoitus tulee klo 6 tai niin pian sen jälkeen kuin GitHub
 ehtii. Aiempi versio vaati tasan klo 6, jolloin myöhästynyt ajo jäi kokonaan
 julkaisematta.
+
+Ottelutietojen haku ajetaan illalla (klo 22 UTC), ei aamuyöllä. Aiemmin se
+ajoi klo 01 UTC, mutta viiveiden takia se osui käytännössä samaan hetkeen
+koosteen kanssa — jolloin aamun ilmoitus olisi voinut perustua edellisen
+vuorokauden tietoihin.
 
 Kooste menee kahteen paikkaan: **GitHub luo siitä ilmoituksen**, josta saat
 sähköpostin automaattisesti (ei vaadi mitään tunnuksia), ja **Facebook-sivulle**,

@@ -4,11 +4,12 @@ name: Viikko-ohjelma ja pelipäivän muistutus
 # Riihikoskella todella pelataan sinä päivänä.
 on:
   schedule:
-    # GitHubin ajastetut työt viivästyvät säännöllisesti, toisinaan tunteja.
-    # Siksi työ yritetään kerran tunnissa aamuyöstä aamupäivään; kooste.py
-    # päästää läpi vain klo 6-12 Suomen aikaa, ja jo tehty ilmoitus
-    # tunnistetaan GitHub-ilmoituksesta, joten julkaisuja tulee silti yksi.
-    - cron: "0 3-8 * * *"
+    # GitHubin ajastetut työt viivästyvät säännöllisesti, toisinaan yli neljä
+    # tuntia. Yritys alkaa siksi jo klo 02 UTC: silloin nelituntinenkin viive
+    # osuu vielä aamun julkaisuikkunaan. kooste.py päästää läpi vain klo 6-12
+    # Suomen aikaa, ja jo tehty ilmoitus tunnistetaan saman päivän
+    # GitHub-ilmoituksesta, joten julkaisuja tulee silti yksi.
+    - cron: "0 2-8 * * *"
   workflow_dispatch:
     inputs:
       tila:

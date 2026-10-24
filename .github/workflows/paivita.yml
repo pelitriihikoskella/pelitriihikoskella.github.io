@@ -3,9 +3,10 @@ name: Päivitä pelit
 # Hakee ottelut Torneopalista ja julkaisee sivun GitHub Pagesiin.
 on:
   schedule:
-    # Hyvissä ajoin ennen koostetta (06.00 Suomen aikaa), jotta aamun
-    # ilmoitus perustuu tuoreeseen dataan.
-    - cron: "0 1 * * *"      # 03.00 Suomen kesäaikaa, 02.00 talvella
+    # Illalla, jotta aamun ilmoitus perustuu tuoreeseen dataan myös silloin
+    # kun GitHubin ajastus viivästyy tunteja. Klo 01 UTC:n ajo osui käytännössä
+    # usein vasta klo 05 jälkeen - eli koosteen kanssa samaan hetkeen.
+    - cron: "0 22 * * *"     # 01.00 Suomen kesäaikaa, 00.00 talvella
   workflow_dispatch:          # "Run workflow" -nappi Actions-välilehdellä
   push:
     branches: [main]
