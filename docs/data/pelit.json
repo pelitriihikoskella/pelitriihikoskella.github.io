@@ -1,70 +1,11 @@
 {
- "paivitetty": "2026-10-31T19:10:31+00:00",
+ "paivitetty": "2026-11-01T19:25:41+00:00",
  "lahteet_haettu": [
   "salibandy",
   "spl"
  ],
  "huomiot": [],
  "ottelut": [
-  {
-   "id": "salibandy-939987",
-   "laji": "Salibandy",
-   "paikka": "Kisariihi",
-   "paikka_tarkenne": "Kisariihi Pöytyä",
-   "pvm": "2026-10-31",
-   "klo": "10:30",
-   "sarja": "M3DIV LR",
-   "koti": "TVV",
-   "vieras": "AFC Campus",
-   "koti_id": "salibandy-3546",
-   "vieras_id": "salibandy-4639",
-   "koti_seura": "TURUN VETO JA VIHELLYS",
-   "vieras_seura": "ACADEMIC FLOORBALL CLUB CAMPUS",
-   "linkki": "https://tulospalvelu.salibandy.fi/match/939987",
-   "lahde": "salibandy",
-   "seurat": [],
-   "kesto": 90
-  },
-  {
-   "id": "salibandy-939988",
-   "laji": "Salibandy",
-   "paikka": "Kisariihi",
-   "paikka_tarkenne": "Kisariihi Pöytyä",
-   "pvm": "2026-10-31",
-   "klo": "13:00",
-   "sarja": "M3DIV LR",
-   "koti": "FC KYPS",
-   "vieras": "TVV",
-   "koti_id": "salibandy-7681",
-   "vieras_id": "salibandy-3546",
-   "koti_seura": "FC KYPS",
-   "vieras_seura": "TURUN VETO JA VIHELLYS",
-   "linkki": "https://tulospalvelu.salibandy.fi/match/939988",
-   "lahde": "salibandy",
-   "seurat": [],
-   "kesto": 90
-  },
-  {
-   "id": "salibandy-939989",
-   "laji": "Salibandy",
-   "paikka": "Kisariihi",
-   "paikka_tarkenne": "Kisariihi Pöytyä",
-   "pvm": "2026-10-31",
-   "klo": "14:30",
-   "sarja": "M3DIV LR",
-   "koti": "AFC Campus",
-   "vieras": "PöU",
-   "koti_id": "salibandy-4639",
-   "vieras_id": "salibandy-2837",
-   "koti_seura": "ACADEMIC FLOORBALL CLUB CAMPUS",
-   "vieras_seura": "PÖYTYÄN URHEILIJAT",
-   "linkki": "https://tulospalvelu.salibandy.fi/match/939989",
-   "lahde": "salibandy",
-   "seurat": [
-    "pou"
-   ],
-   "kesto": 90
-  },
   {
    "id": "spl-4355036",
    "laji": "Futsal",
