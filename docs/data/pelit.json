@@ -1,5 +1,5 @@
 {
- "paivitetty": "2026-11-11T21:48:26+00:00",
+ "paivitetty": "2026-11-12T21:47:14+00:00",
  "lahteet_haettu": [
   "salibandy",
   "spl"
@@ -464,6 +464,27 @@
    "kesto": 90
   },
   {
+   "id": "salibandy-933990",
+   "laji": "Salibandy",
+   "paikka": "Kisariihi",
+   "paikka_tarkenne": "Kisariihi Pöytyä",
+   "pvm": "2026-12-19",
+   "klo": "11:40",
+   "sarja": "Naisten Suomisarja, lohko A",
+   "koti": "HIFK",
+   "vieras": "PöU",
+   "koti_id": "salibandy-7408",
+   "vieras_id": "salibandy-2863",
+   "koti_seura": "IFK INNEBANDY, HELSINGFORS",
+   "vieras_seura": "PÖYTYÄN URHEILIJAT",
+   "linkki": "https://tulospalvelu.salibandy.fi/match/933990",
+   "lahde": "salibandy",
+   "seurat": [
+    "pou"
+   ],
+   "kesto": 90
+  },
+  {
    "id": "salibandy-933987",
    "laji": "Salibandy",
    "paikka": "Kisariihi",
@@ -520,27 +541,6 @@
    "linkki": "https://tulospalvelu.salibandy.fi/match/933989",
    "lahde": "salibandy",
    "seurat": [],
-   "kesto": 90
-  },
-  {
-   "id": "salibandy-933990",
-   "laji": "Salibandy",
-   "paikka": "Kisariihi",
-   "paikka_tarkenne": "Kisariihi Pöytyä",
-   "pvm": "2026-12-19",
-   "klo": "19:00",
-   "sarja": "Naisten Suomisarja, lohko A",
-   "koti": "HIFK",
-   "vieras": "PöU",
-   "koti_id": "salibandy-7408",
-   "vieras_id": "salibandy-2863",
-   "koti_seura": "IFK INNEBANDY, HELSINGFORS",
-   "vieras_seura": "PÖYTYÄN URHEILIJAT",
-   "linkki": "https://tulospalvelu.salibandy.fi/match/933990",
-   "lahde": "salibandy",
-   "seurat": [
-    "pou"
-   ],
    "kesto": 90
   },
   {

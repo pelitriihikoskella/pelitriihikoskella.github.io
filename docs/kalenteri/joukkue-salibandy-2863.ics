@@ -26,8 +26,20 @@ TZNAME:EEST
 END:DAYLIGHT
 END:VTIMEZONE
 BEGIN:VEVENT
+UID:salibandy-933990@riihikoski-pelit
+DTSTAMP:20261112T214714Z
+DTSTART;TZID=Europe/Helsinki:20261219T114000
+DTEND;TZID=Europe/Helsinki:20261219T131000
+SUMMARY:Naisten Suomisarja\, lohko A: HIFK - PöU
+LOCATION:Kisariihi Pöytyä\, Riihikoski
+DESCRIPTION:Salibandy - Naisten Suomisarja\, lohko A\nhttps://tulospalvelu.
+ salibandy.fi/match/933990
+CATEGORIES:Salibandy
+URL:https://tulospalvelu.salibandy.fi/match/933990
+END:VEVENT
+BEGIN:VEVENT
 UID:salibandy-933987@riihikoski-pelit
-DTSTAMP:20261111T214826Z
+DTSTAMP:20261112T214714Z
 DTSTART;TZID=Europe/Helsinki:20261219T140000
 DTEND;TZID=Europe/Helsinki:20261219T153000
 SUMMARY:Naisten Suomisarja\, lohko A: PöU - SBSV
@@ -38,20 +50,8 @@ CATEGORIES:Salibandy
 URL:https://tulospalvelu.salibandy.fi/match/933987
 END:VEVENT
 BEGIN:VEVENT
-UID:salibandy-933990@riihikoski-pelit
-DTSTAMP:20261111T214826Z
-DTSTART;TZID=Europe/Helsinki:20261219T190000
-DTEND;TZID=Europe/Helsinki:20261219T203000
-SUMMARY:Naisten Suomisarja\, lohko A: HIFK - PöU
-LOCATION:Kisariihi Pöytyä\, Riihikoski
-DESCRIPTION:Salibandy - Naisten Suomisarja\, lohko A\nhttps://tulospalvelu.
- salibandy.fi/match/933990
-CATEGORIES:Salibandy
-URL:https://tulospalvelu.salibandy.fi/match/933990
-END:VEVENT
-BEGIN:VEVENT
 UID:salibandy-934011@riihikoski-pelit
-DTSTAMP:20261111T214826Z
+DTSTAMP:20261112T214714Z
 DTSTART;TZID=Europe/Helsinki:20270213T100000
 DTEND;TZID=Europe/Helsinki:20270213T113000
 SUMMARY:Naisten Suomisarja\, lohko A: AFC Campus - PöU
@@ -63,7 +63,7 @@ URL:https://tulospalvelu.salibandy.fi/match/934011
 END:VEVENT
 BEGIN:VEVENT
 UID:salibandy-934013@riihikoski-pelit
-DTSTAMP:20261111T214826Z
+DTSTAMP:20261112T214714Z
 DTSTART;TZID=Europe/Helsinki:20270213T143000
 DTEND;TZID=Europe/Helsinki:20270213T160000
 SUMMARY:Naisten Suomisarja\, lohko A: PöU - Nystars
