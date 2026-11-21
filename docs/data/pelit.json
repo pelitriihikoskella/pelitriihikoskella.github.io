@@ -1,32 +1,11 @@
 {
- "paivitetty": "2026-11-20T22:10:27+00:00",
+ "paivitetty": "2026-11-21T20:49:26+00:00",
  "lahteet_haettu": [
   "salibandy",
   "spl"
  ],
  "huomiot": [],
  "ottelut": [
-  {
-   "id": "salibandy-941815",
-   "laji": "Salibandy",
-   "paikka": "Kisariihi",
-   "paikka_tarkenne": "Kisariihi Pöytyä",
-   "pvm": "2026-11-20",
-   "klo": "19:30",
-   "sarja": "M3DIV LR",
-   "koti": "PöU",
-   "vieras": "FC KYPS",
-   "koti_id": "salibandy-2837",
-   "vieras_id": "salibandy-7681",
-   "koti_seura": "PÖYTYÄN URHEILIJAT",
-   "vieras_seura": "FC KYPS",
-   "linkki": "https://tulospalvelu.salibandy.fi/match/941815",
-   "lahde": "salibandy",
-   "seurat": [
-    "pou"
-   ],
-   "kesto": 90
-  },
   {
    "id": "spl-4355044",
    "laji": "Futsal",
