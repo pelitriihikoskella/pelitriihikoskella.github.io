@@ -1,91 +1,11 @@
 {
- "paivitetty": "2026-11-21T20:49:26+00:00",
+ "paivitetty": "2026-11-22T20:57:34+00:00",
  "lahteet_haettu": [
   "salibandy",
   "spl"
  ],
  "huomiot": [],
  "ottelut": [
-  {
-   "id": "spl-4355044",
-   "laji": "Futsal",
-   "paikka": "Kisariihi",
-   "paikka_tarkenne": "Kisariihi",
-   "pvm": "2026-11-21",
-   "klo": "11:00",
-   "sarja": "Miesten Futsal-Kolmonen A",
-   "koti": "YlKiri/MF",
-   "vieras": "TPS",
-   "koti_id": "spl-35150500",
-   "vieras_id": "spl-167295",
-   "koti_seura": "Yläneen Kiri",
-   "vieras_seura": "TPS Juniorijalkapallo",
-   "linkki": "https://tulospalvelu.palloliitto.fi/match/4355044",
-   "lahde": "spl",
-   "seurat": [],
-   "kesto": 90
-  },
-  {
-   "id": "spl-4387543",
-   "laji": "Futsal",
-   "paikka": "Kisariihi",
-   "paikka_tarkenne": "Kisariihi",
-   "pvm": "2026-11-21",
-   "klo": "14:00",
-   "sarja": "Miesten Futsal-Nelonen A1",
-   "koti": "Pöka",
-   "vieras": "Ponteva/Futsal",
-   "koti_id": "spl-35228341",
-   "vieras_id": "spl-35176191",
-   "koti_seura": "Pöytyän Kaima",
-   "vieras_seura": "Turun Ponteva",
-   "linkki": "https://tulospalvelu.palloliitto.fi/match/4387543",
-   "lahde": "spl",
-   "seurat": [
-    "poka"
-   ],
-   "kesto": 90
-  },
-  {
-   "id": "spl-4387544",
-   "laji": "Futsal",
-   "paikka": "Kisariihi",
-   "paikka_tarkenne": "Kisariihi",
-   "pvm": "2026-11-21",
-   "klo": "15:15",
-   "sarja": "Miesten Futsal-Nelonen A1",
-   "koti": "Ponteva/Futsal",
-   "vieras": "Jyske",
-   "koti_id": "spl-35176191",
-   "vieras_id": "spl-35151040",
-   "koti_seura": "Turun Ponteva",
-   "vieras_seura": "Laitilan Jyske",
-   "linkki": "https://tulospalvelu.palloliitto.fi/match/4387544",
-   "lahde": "spl",
-   "seurat": [],
-   "kesto": 90
-  },
-  {
-   "id": "spl-4387545",
-   "laji": "Futsal",
-   "paikka": "Kisariihi",
-   "paikka_tarkenne": "Kisariihi",
-   "pvm": "2026-11-21",
-   "klo": "16:30",
-   "sarja": "Miesten Futsal-Nelonen A1",
-   "koti": "Jyske",
-   "vieras": "Pöka",
-   "koti_id": "spl-35151040",
-   "vieras_id": "spl-35228341",
-   "koti_seura": "Laitilan Jyske",
-   "vieras_seura": "Pöytyän Kaima",
-   "linkki": "https://tulospalvelu.palloliitto.fi/match/4387545",
-   "lahde": "spl",
-   "seurat": [
-    "poka"
-   ],
-   "kesto": 90
-  },
   {
    "id": "spl-4400204",
    "laji": "Futsal",
